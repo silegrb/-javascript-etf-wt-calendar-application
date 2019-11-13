@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "testRezervacijeMobitel.gspec",
+    "startedAt" : 1573659340485,
+    "endedAt" : 1573659348849,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 75,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 75
+    },
+    "testId" : "1-testrezervacijemobitel.gspec",
+    "duration" : 8364,
+    "failed" : false
+  } ]
+}

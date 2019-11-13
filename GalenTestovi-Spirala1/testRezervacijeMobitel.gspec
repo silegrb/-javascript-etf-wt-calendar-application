@@ -1,0 +1,108 @@
+@objects
+	logo				css 								.logo
+	meniDiv				css									.meni
+	meniItemPocetna 	xpath								//div[@class='meni']/ul/li[1]
+	meniItemSale 		xpath 								//div[@class='meni']/ul/li[2]
+	meniItemUnos 		xpath								//div[@class='meni']/ul/li[3]
+	meniItemRezervacije xpath								//div[@class='meni']/ul/li[4]
+	sadrzajDiv			css									.sadrzaj
+	labelPocetak		xpath 								//label[@for='pocetak']
+	labelKraj			xpath    							//label[@for='kraj']
+	inputPocetak		xpath								//input[@name='pocetak']
+	inputKraj			xpath								//input[@name='kraj']
+	kalendar			xpath 								//div[@class='sadrzaj']/table
+	dugmePrethodni		css 								#prethodni
+	dugmeSljedeci		css 								#sljedeci
+
+= MENI =
+	logo:
+		width 98 to 102px
+		centered horizontally inside viewport
+		height 78 to 82px
+		inside viewport 33 to 37px top	
+	meniDiv:
+		width 78 to 82% of viewport/width
+		centered horizontally inside viewport
+		height 202 to 206px
+		inside viewport 73 to 77px top
+	meniItemPocetna:
+		inside meniDiv 105 to 109px bottom
+		inside meniDiv 72 to 76px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemSale:
+		inside meniDiv 81 to 85px bottom
+		inside meniDiv 95 to 99px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemUnos:
+		inside meniDiv 57 to 61px bottom
+		inside meniDiv 119 to 123px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemRezervacije:
+		inside meniDiv 33 to 37px bottom
+		inside meniDiv 143 to 147px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+
+= SADRZAJ =		
+	sadrzajDiv:
+		width 78 to 92% of viewport/width
+		height 849 to 853px
+		centered horizontally inside viewport
+    	below meniDiv 8 to 12px
+    labelPocetak:
+    	visible
+    	width 198 to 202px
+    	height 21 to 25px
+    	inside sadrzajDiv 93 to 97px left
+    	inside sadrzajDiv 93 to 97px right
+    	inside sadrzajDiv 182 to 186px top
+    	near inputPocetak 0 to 4px top
+    labelKraj:
+    	visible
+    	width 198 to 202px
+    	height 21 to 25px
+    	inside sadrzajDiv 93 to 97px left
+    	inside sadrzajDiv 93 to 97px right
+    	near inputPocetak 16 to 20px bottom
+    	near inputKraj 0 to 4px top
+	inputPocetak:
+    	visible
+    	width 153 to 157px
+    	inside sadrzajDiv 103 to 107px right
+    	inside sadrzajDiv 128 to 132px left
+    	inside sadrzajDiv 205 to 209px top
+    	near labelPocetak 0 to 4px bottom
+    	near labelKraj 16 to 20px top
+    inputKraj:
+    	visible
+    	width 153 to 157px
+    	inside sadrzajDiv 128 to 132px left
+    	inside sadrzajDiv 103 to 107px right
+    	inside sadrzajDiv 270 to 274px top
+    	near labelKraj 0 to 4px bottom
+    	inside sadrzajDiv 553 to 557px bottom
+    kalendar:
+    	width 77 to 81% of sadrzajDiv/width
+    	height 40 to 44% of sadrzajDiv/height
+    	inside sadrzajDiv 39 to 43px right
+    	inside sadrzajDiv 38 to 42px left
+    	near inputKraj 70 to 74px bottom
+    	inside sadrzajDiv 119 to 123px bottom
+    dugmePrethodni:
+    	width 98 to 102px
+    	height 23 to 27px
+    	inside sadrzajDiv 143 to 147px left
+    	inside sadrzajDiv 143 to 147px right
+    	near kalendar 8 to 12px bottom
+    	near dugmeSljedeci 8 to 12px top
+    dugmeSljedeci:
+    	width 98 to 102px
+    	height 23 to 27px
+    	inside sadrzajDiv 143 to 147px left
+    	inside sadrzajDiv 143 to 147px right
+    	near dugmePrethodni 8 to 12px bottom
+    	inside sadrzajDiv 49 to 53px bottom
+

@@ -1,0 +1,93 @@
+@objects
+	logo				css 								.logo
+	meniDiv				css									.meni
+	meniItemPocetna 	xpath								//div[@class='meni']/ul/li[1]
+	meniItemSale 		xpath 								//div[@class='meni']/ul/li[2]
+	meniItemUnos 		xpath								//div[@class='meni']/ul/li[3]
+	meniItemRezervacije xpath								//div[@class='meni']/ul/li[4]
+	sadrzajDiv			css									.sadrzaj
+	labelNaziv			xpath								//label[@for='naziv']
+	labelBrojMjesta		xpath								//label[@for='brojMjesta']
+	inputNaziv			xpath 								//input[@name='naziv']
+	inputBrojMjesta		xpath   							//input[@name='brojMjesta']
+	dugmePotvrdi 		css									#unos
+
+= MENI =
+	logo:
+		width 98 to 102px
+		centered horizontally inside viewport
+		height 78 to 82px
+		inside viewport 33 to 37px top	
+	meniDiv:
+		width 78 to 82% of viewport/width
+		centered horizontally inside viewport
+		height 202 to 206px
+		inside viewport 73 to 77px top
+	meniItemPocetna:
+		inside meniDiv 105 to 109px bottom
+		inside meniDiv 72 to 76px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemSale:
+		inside meniDiv 81 to 85px bottom
+		inside meniDiv 95 to 99px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemUnos:
+		inside meniDiv 57 to 61px bottom
+		inside meniDiv 119 to 123px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemRezervacije:
+		inside meniDiv 33 to 37px bottom
+		inside meniDiv 143 to 147px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+
+= SADRZAJ =		
+	sadrzajDiv:
+		width 78 to 92% of viewport/width
+		height 493 to 497px
+		centered horizontally inside viewport
+    	below meniDiv 8 to 12px
+    labelNaziv:
+    	visible
+    	width 198 to 202px
+    	inside sadrzajDiv 93 to 97px left
+    	inside sadrzajDiv 93 to 97px right
+    	inside sadrzajDiv 49 to 53px top
+    	inside sadrzajDiv 419 to 423px bottom
+    labelBrojMjesta:
+    	visible
+    	width 198 to 202px
+    	inside sadrzajDiv 93 to 97px left
+    	inside sadrzajDiv 93 to 97px right
+    	near inputNaziv 34 to 38px bottom
+    	near inputBrojMjesta 0 to 4px top
+    	inside sadrzajDiv 134 to 138px top
+    	inside sadrzajDiv 334 to 338px bottom
+    inputNaziv:
+    	visible
+    	width 154 to 158px
+    	height 24 to 28px
+    	inside sadrzajDiv 115 to 119px right
+    	inside sadrzajDiv 115 to 119px left
+    	near labelNaziv 0 to 4px bottom
+    	near labelBrojMjesta 34 to 38px top
+    inputBrojMjesta:
+    	visible
+    	width 154 to 158px
+    	height 24 to 28px
+    	inside sadrzajDiv 115 to 119px right
+    	inside sadrzajDiv 115 to 119px left
+    	inside sadrzajDiv 308 to 312px bottom
+    	near labelBrojMjesta 0 to 4px bottom
+	dugmePotvrdi:
+		centered horizontally inside sadrzajDiv
+		width 148 to 152px
+		height 33 to 37px
+		inside sadrzajDiv 118 to 122px left
+		inside sadrzajDiv 118 to 122px right
+		inside sadrzajDiv 49 to 53px bottom
+		inside sadrzajDiv 407 to 411px top
+

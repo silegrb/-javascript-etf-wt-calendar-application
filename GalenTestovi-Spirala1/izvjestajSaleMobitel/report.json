@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "testSaleMobitel.gspec",
+    "startedAt" : 1573659437484,
+    "endedAt" : 1573659443545,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 35,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 36
+    },
+    "testId" : "1-testsalemobitel.gspec",
+    "duration" : 6061,
+    "failed" : true
+  } ]
+}

@@ -1,0 +1,47 @@
+@objects
+	logo				css 								.logo
+	meniDiv				css									.meni
+	meniItemPocetna 	//div[@class='meni']/ul/li[1]
+	meniItemSale 		//div[@class='meni']/ul/li[2]
+	meniItemUnos 		//div[@class='meni']/ul/li[3]
+	meniItemRezervacije //div[@class='meni']/ul/li[4]
+	sadrzajDiv			css									.sadrzaj
+
+= MENI =
+	logo:
+		width 98 to 102px
+		centered horizontally inside viewport
+		height 78 to 82px
+		inside viewport 33 to 37px top	
+	meniDiv:
+		width 502 to 506px
+		centered horizontally inside viewport
+		height 102 to 106px
+		inside viewport 73 to 77px top
+	meniItemPocetna:
+		inside meniDiv 5 to 9px bottom
+		inside meniDiv 63 to 67px left
+		inside meniDiv 72 to 76px top
+		inside meniDiv 357 to 361px right
+	meniItemSale:
+		inside meniDiv 5 to 9px bottom
+		inside meniDiv 148 to 152px left
+		inside meniDiv 72 to 76px top
+		inside meniDiv 299 to 303px right
+	meniItemUnos:
+		inside meniDiv 5 to 9px bottom
+		inside meniDiv 205 to 209px left
+		inside meniDiv 72 to 76px top
+		inside meniDiv 236 to 240px right
+	meniItemRezervacije:
+		inside meniDiv 5 to 9px bottom
+		inside meniDiv 267 to 271px left
+		inside meniDiv 72 to 76px top
+		inside meniDiv 127 to 131px right
+
+= SADRZAJ =		
+	sadrzajDiv:
+		width 502 to 506px
+		height 690 to 694px
+		centered horizontally inside viewport
+    	below meniDiv 8 to 12px

@@ -1,0 +1,956 @@
+{
+  "testId" : "1-testsale.gspec",
+  "name" : "testSale.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  testSale.gspec --url http://localhost:8080/sale.html --size 1024x768 --offset 4 --htmlreport izvjestajSale",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: testSale.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573659163887,
+          "sections" : [ {
+            "name" : "MENI",
+            "place" : {
+              "filePath" : "testSale.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "width 98 to 102px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "98 to 102px",
+                  "realDistance" : "100px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "logo", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "height 78 to 82px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "78 to 82px",
+                  "realDistance" : "80px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside viewport 33 to 37px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "viewport",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "33 to 37px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "logo", "viewport" ]
+              } ]
+            }, {
+              "name" : "meniDiv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "width 502 to 506px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "502 to 506px",
+                  "realDistance" : "504px"
+                } ],
+                "highlight" : [ "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "meniDiv", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "height 102 to 106px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "102 to 106px",
+                  "realDistance" : "104px"
+                } ],
+                "highlight" : [ "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "inside viewport 73 to 77px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "viewport",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "73 to 77px",
+                  "realDistance" : "75px"
+                } ],
+                "highlight" : [ "meniDiv", "viewport" ]
+              } ]
+            }, {
+              "name" : "meniItemPocetna",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 25
+                },
+                "name" : "inside meniDiv 5 to 9px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "5 to 9px",
+                  "realDistance" : "7px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside meniDiv 63 to 67px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "63 to 67px",
+                  "realDistance" : "65px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "inside meniDiv 72 to 76px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "72 to 76px",
+                  "realDistance" : "74px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "inside meniDiv 357 to 361px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "357 to 361px",
+                  "realDistance" : "359px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemSale",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "inside meniDiv 5 to 9px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "5 to 9px",
+                  "realDistance" : "7px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "inside meniDiv 148 to 152px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "148 to 152px",
+                  "realDistance" : "150px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "inside meniDiv 72 to 76px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "72 to 76px",
+                  "realDistance" : "74px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "inside meniDiv 299 to 303px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "299 to 303px",
+                  "realDistance" : "301px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemUnos",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "inside meniDiv 5 to 9px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "5 to 9px",
+                  "realDistance" : "7px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "inside meniDiv 205 to 209px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "205 to 209px",
+                  "realDistance" : "207px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "inside meniDiv 72 to 76px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "72 to 76px",
+                  "realDistance" : "74px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "inside meniDiv 236 to 240px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "236 to 240px",
+                  "realDistance" : "238px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemRezervacije",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "inside meniDiv 5 to 9px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "5 to 9px",
+                  "realDistance" : "7px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "inside meniDiv 267 to 271px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "267 to 271px",
+                  "realDistance" : "269px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "inside meniDiv 72 to 76px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "72 to 76px",
+                  "realDistance" : "74px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "inside meniDiv 127 to 131px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "127 to 131px",
+                  "realDistance" : "129px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              } ]
+            } ]
+          }, {
+            "name" : "SADRZAJ",
+            "place" : {
+              "filePath" : "testSale.gspec",
+              "lineNumber" : 45
+            },
+            "objects" : [ {
+              "name" : "sadrzajDiv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "width 502 to 506px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "502 to 506px",
+                  "realDistance" : "502px"
+                } ],
+                "highlight" : [ "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height 575 to 579px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "575 to 579px",
+                  "realDistance" : "577px"
+                } ],
+                "highlight" : [ "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "sadrzajDiv", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 50
+                },
+                "name" : "below meniDiv 8 to 12px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "8 to 12px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "sadrzajDiv", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "tabelaSala",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 52
+                },
+                "name" : "centered horizontally inside sadrzajDiv",
+                "highlight" : [ "tabelaSala", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "width 87 to 91% of sadrzajDiv/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "87 to 91% [436 to 456px]",
+                  "realDistance" : "89% [450px]"
+                } ],
+                "highlight" : [ "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 74 to 78% of sadrzajDiv/height",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "74 to 78% [426 to 450px]",
+                  "realDistance" : "76% [441px]"
+                } ],
+                "highlight" : [ "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 55
+                },
+                "name" : "inside sadrzajDiv 24 to 28px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "24 to 28px",
+                  "realDistance" : "26px"
+                } ],
+                "highlight" : [ "tabelaSala", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 56
+                },
+                "name" : "inside sadrzajDiv 108 to 112px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "108 to 112px",
+                  "realDistance" : "110px"
+                } ],
+                "highlight" : [ "tabelaSala", "sadrzajDiv" ]
+              } ]
+            }, {
+              "name" : "naslovSpratovi",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 58
+                },
+                "name" : "visible",
+                "highlight" : [ "naslovSpratovi" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 59
+                },
+                "name" : "inside tabelaSala 0 to 2px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovSpratovi",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0 to 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "naslovSpratovi", "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 60
+                },
+                "name" : "inside tabelaSala 0 to 2px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovSpratovi",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0 to 2px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "naslovSpratovi", "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 61
+                },
+                "name" : "inside tabelaSala 72 to 76px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovSpratovi",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "72 to 76px",
+                  "realDistance" : "74px"
+                } ],
+                "highlight" : [ "naslovSpratovi", "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 62
+                },
+                "name" : "inside tabelaSala 399 to 403px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovSpratovi",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "399 to 403px",
+                  "realDistance" : "401px"
+                } ],
+                "highlight" : [ "naslovSpratovi", "tabelaSala" ]
+              } ]
+            }, {
+              "name" : "naslovRedni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 64
+                },
+                "name" : "visible",
+                "highlight" : [ "naslovRedni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "inside tabelaSala 38 to 42px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovRedni",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "38 to 42px",
+                  "realDistance" : "40px"
+                } ],
+                "highlight" : [ "naslovRedni", "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 66
+                },
+                "name" : "inside tabelaSala 374 to 378px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovRedni",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "374 to 378px",
+                  "realDistance" : "376px"
+                } ],
+                "highlight" : [ "naslovRedni", "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 67
+                },
+                "name" : "inside tabelaSala 0 to 2px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovRedni",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0 to 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "naslovRedni", "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSale.gspec",
+                  "lineNumber" : 68
+                },
+                "name" : "inside tabelaSala 359to 363px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "naslovRedni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "359 to 363px",
+                  "realDistance" : "361px"
+                } ],
+                "highlight" : [ "naslovRedni", "tabelaSala" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meniDiv" : {
+              "area" : [ 260, 75, 504, 104 ]
+            },
+            "naslovSpratovi" : {
+              "area" : [ 361, 215, 375, 40 ]
+            },
+            "meniItemPocetna" : {
+              "area" : [ 325, 149, 80, 23 ]
+            },
+            "viewport" : {
+              "area" : [ 0, 0, 1024, 689 ]
+            },
+            "sadrzajDiv" : {
+              "area" : [ 261, 189, 502, 577 ]
+            },
+            "logo" : {
+              "area" : [ 462, 35, 100, 80 ]
+            },
+            "meniItemSale" : {
+              "area" : [ 410, 149, 53, 23 ]
+            },
+            "meniItemUnos" : {
+              "area" : [ 467, 149, 59, 23 ]
+            },
+            "meniItemRezervacije" : {
+              "area" : [ 529, 149, 106, 23 ]
+            },
+            "naslovRedni" : {
+              "area" : [ 287, 255, 74, 40 ]
+            },
+            "tabelaSala" : {
+              "area" : [ 287, 215, 450, 441 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: testSale.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573659163887,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "meniDiv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "naslovSpratovi" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemPocetna" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzajDiv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "logo" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemSale" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemUnos" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemRezervacije" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "naslovRedni" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "tabelaSala" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              }
+            },
+            "totalPassed" : 100,
+            "totalFailed" : 0,
+            "totalMutations" : 100,
+            "failedRatio" : 0.0
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573659159035,
+        "type" : "node"
+      } ],
+      "time" : 1573659157054,
+      "type" : "node"
+    } ]
+  }
+}

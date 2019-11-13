@@ -1,0 +1,54 @@
+@objects
+	logo				css 								.logo
+	meniDiv				css									.meni
+	meniItemPocetna 	xpath								//div[@class='meni']/ul/li[1]
+	meniItemSale 		xpath 								//div[@class='meni']/ul/li[2]
+	meniItemUnos 		xpath								//div[@class='meni']/ul/li[3]
+	meniItemRezervacije xpath								//div[@class='meni']/ul/li[4]
+	sadrzajDiv			css									.sadrzaj
+	slika1				xpath								//img[@alt='Slika 1']
+
+= MENI =
+	logo:
+		width 98 to 102px
+		centered horizontally inside viewport
+		height 78 to 82px
+		inside viewport 33 to 37px top	
+	meniDiv:
+		width 78 to 82% of viewport/width
+		centered horizontally inside viewport
+		height 202 to 206px
+		inside viewport 73 to 77px top
+	meniItemPocetna:
+		inside meniDiv 105 to 109px bottom
+		inside meniDiv 72 to 76px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemSale:
+		inside meniDiv 81 to 85px bottom
+		inside meniDiv 95 to 99px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemUnos:
+		inside meniDiv 57 to 61px bottom
+		inside meniDiv 119 to 123px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemRezervacije:
+		inside meniDiv 33 to 37px bottom
+		inside meniDiv 143 to 147px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+
+= SADRZAJ =		
+	sadrzajDiv:
+		width 78 to 92% of viewport/width
+		height 1410 to 1414px
+		centered horizontally inside viewport
+    	below meniDiv 8 to 12px
+    slika1:
+    	centered horizontally inside viewport
+    	width 118 to 122px
+    	height 118 to 122px
+    	inside sadrzajDiv 14 to 18px top
+    	inside sadrzajDiv 1274 to 1278px bottom

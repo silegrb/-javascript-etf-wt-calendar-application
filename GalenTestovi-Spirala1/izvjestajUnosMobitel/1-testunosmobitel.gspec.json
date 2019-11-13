@@ -1,0 +1,1354 @@
+{
+  "testId" : "1-testunosmobitel.gspec",
+  "name" : "testUnosMobitel.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  testUnosMobitel.gspec --url http://localhost:8080/unos.html --size 480x800 --offset 4 --htmlreport izvjestajUnosMobitel",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: testUnosMobitel.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573659389679,
+          "sections" : [ {
+            "name" : "MENI",
+            "place" : {
+              "filePath" : "testUnosMobitel.gspec",
+              "lineNumber" : 15
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "width 98 to 102px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "98 to 102px",
+                  "realDistance" : "100px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "logo", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "height 78 to 82px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "78 to 82px",
+                  "realDistance" : "80px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "inside viewport 33 to 37px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "viewport",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "33 to 37px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "logo", "viewport" ]
+              } ]
+            }, {
+              "name" : "meniDiv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "width 78 to 82% of viewport/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "78 to 82% [390 to 410px]",
+                  "realDistance" : "78% [392px]"
+                } ],
+                "highlight" : [ "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "meniDiv", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "height 202 to 206px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "202 to 206px",
+                  "realDistance" : "204px"
+                } ],
+                "highlight" : [ "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 25
+                },
+                "name" : "inside viewport 73 to 77px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "viewport",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "73 to 77px",
+                  "realDistance" : "75px"
+                } ],
+                "highlight" : [ "meniDiv", "viewport" ]
+              } ]
+            }, {
+              "name" : "meniItemPocetna",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "inside meniDiv 105 to 109px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "105 to 109px",
+                  "realDistance" : "107px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "inside meniDiv 72 to 76px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "72 to 76px",
+                  "realDistance" : "73px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemSale",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "inside meniDiv 81 to 85px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "81 to 85px",
+                  "realDistance" : "83px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "inside meniDiv 95 to 99px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "95 to 99px",
+                  "realDistance" : "97px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemUnos",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "inside meniDiv 57 to 61px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "57 to 61px",
+                  "realDistance" : "59px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "inside meniDiv 119 to 123px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "119 to 123px",
+                  "realDistance" : "121px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemRezervacije",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "inside meniDiv 33 to 37px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "33 to 37px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "inside meniDiv 143 to 147px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "143 to 147px",
+                  "realDistance" : "145px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              } ]
+            } ]
+          }, {
+            "name" : "SADRZAJ",
+            "place" : {
+              "filePath" : "testUnosMobitel.gspec",
+              "lineNumber" : 47
+            },
+            "objects" : [ {
+              "name" : "sadrzajDiv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width 78 to 92% of viewport/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "78 to 92% [390 to 460px]",
+                  "realDistance" : "78% [390px]"
+                } ],
+                "highlight" : [ "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 50
+                },
+                "name" : "height 493 to 497px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "493 to 497px",
+                  "realDistance" : "495px"
+                } ],
+                "highlight" : [ "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "sadrzajDiv", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 52
+                },
+                "name" : "below meniDiv 8 to 12px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "8 to 12px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "sadrzajDiv", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "labelNaziv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "visible",
+                "highlight" : [ "labelNaziv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 55
+                },
+                "name" : "width 198 to 202px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelNaziv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "labelNaziv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "labelNaziv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 56
+                },
+                "name" : "inside sadrzajDiv 93 to 97px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelNaziv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "93 to 97px",
+                  "realDistance" : "95px"
+                } ],
+                "highlight" : [ "labelNaziv", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 57
+                },
+                "name" : "inside sadrzajDiv 93 to 97px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelNaziv",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "93 to 97px",
+                  "realDistance" : "95px"
+                } ],
+                "highlight" : [ "labelNaziv", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 58
+                },
+                "name" : "inside sadrzajDiv 49 to 53px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelNaziv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "49 to 53px",
+                  "realDistance" : "51px"
+                } ],
+                "highlight" : [ "labelNaziv", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 59
+                },
+                "name" : "inside sadrzajDiv 419 to 423px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelNaziv",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "419 to 423px",
+                  "realDistance" : "421px"
+                } ],
+                "highlight" : [ "labelNaziv", "sadrzajDiv" ]
+              } ]
+            }, {
+              "name" : "labelBrojMjesta",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 61
+                },
+                "name" : "visible",
+                "highlight" : [ "labelBrojMjesta" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 62
+                },
+                "name" : "width 198 to 202px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "labelBrojMjesta" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 63
+                },
+                "name" : "inside sadrzajDiv 93 to 97px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "93 to 97px",
+                  "realDistance" : "95px"
+                } ],
+                "highlight" : [ "labelBrojMjesta", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 64
+                },
+                "name" : "inside sadrzajDiv 93 to 97px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "93 to 97px",
+                  "realDistance" : "95px"
+                } ],
+                "highlight" : [ "labelBrojMjesta", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "near inputNaziv 34 to 38px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "inputNaziv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "labelBrojMjesta", "inputNaziv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 66
+                },
+                "name" : "near inputBrojMjesta 0 to 4px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0 to 4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labelBrojMjesta", "inputBrojMjesta" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 67
+                },
+                "name" : "inside sadrzajDiv 134 to 138px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "134 to 138px",
+                  "realDistance" : "136px"
+                } ],
+                "highlight" : [ "labelBrojMjesta", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 68
+                },
+                "name" : "inside sadrzajDiv 334 to 338px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "334 to 338px",
+                  "realDistance" : "336px"
+                } ],
+                "highlight" : [ "labelBrojMjesta", "sadrzajDiv" ]
+              } ]
+            }, {
+              "name" : "inputNaziv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 70
+                },
+                "name" : "visible",
+                "highlight" : [ "inputNaziv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 71
+                },
+                "name" : "width 154 to 158px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputNaziv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "inputNaziv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "154 to 158px",
+                  "realDistance" : "156px"
+                } ],
+                "highlight" : [ "inputNaziv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 72
+                },
+                "name" : "height 24 to 28px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputNaziv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "inputNaziv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "24 to 28px",
+                  "realDistance" : "26px"
+                } ],
+                "highlight" : [ "inputNaziv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 73
+                },
+                "name" : "inside sadrzajDiv 115 to 119px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputNaziv",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "115 to 119px",
+                  "realDistance" : "117px"
+                } ],
+                "highlight" : [ "inputNaziv", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "inside sadrzajDiv 115 to 119px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputNaziv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "115 to 119px",
+                  "realDistance" : "117px"
+                } ],
+                "highlight" : [ "inputNaziv", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 75
+                },
+                "name" : "near labelNaziv 0 to 4px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputNaziv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labelNaziv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0 to 4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "inputNaziv", "labelNaziv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 76
+                },
+                "name" : "near labelBrojMjesta 34 to 38px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputNaziv",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "inputNaziv", "labelBrojMjesta" ]
+              } ]
+            }, {
+              "name" : "inputBrojMjesta",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 78
+                },
+                "name" : "visible",
+                "highlight" : [ "inputBrojMjesta" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 79
+                },
+                "name" : "width 154 to 158px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "154 to 158px",
+                  "realDistance" : "156px"
+                } ],
+                "highlight" : [ "inputBrojMjesta" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 80
+                },
+                "name" : "height 24 to 28px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "24 to 28px",
+                  "realDistance" : "26px"
+                } ],
+                "highlight" : [ "inputBrojMjesta" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 81
+                },
+                "name" : "inside sadrzajDiv 115 to 119px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "115 to 119px",
+                  "realDistance" : "117px"
+                } ],
+                "highlight" : [ "inputBrojMjesta", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 82
+                },
+                "name" : "inside sadrzajDiv 115 to 119px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "115 to 119px",
+                  "realDistance" : "117px"
+                } ],
+                "highlight" : [ "inputBrojMjesta", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 83
+                },
+                "name" : "inside sadrzajDiv 308 to 312px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "308 to 312px",
+                  "realDistance" : "310px"
+                } ],
+                "highlight" : [ "inputBrojMjesta", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 84
+                },
+                "name" : "near labelBrojMjesta 0 to 4px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "inputBrojMjesta",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labelBrojMjesta",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0 to 4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "inputBrojMjesta", "labelBrojMjesta" ]
+              } ]
+            }, {
+              "name" : "dugmePotvrdi",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 86
+                },
+                "name" : "centered horizontally inside sadrzajDiv",
+                "highlight" : [ "dugmePotvrdi", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 87
+                },
+                "name" : "width 148 to 152px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "148 to 152px",
+                  "realDistance" : "150px"
+                } ],
+                "highlight" : [ "dugmePotvrdi" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 88
+                },
+                "name" : "height 33 to 37px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "33 to 37px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "dugmePotvrdi" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 89
+                },
+                "name" : "inside sadrzajDiv 118 to 122px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "118 to 122px",
+                  "realDistance" : "120px"
+                } ],
+                "highlight" : [ "dugmePotvrdi", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 90
+                },
+                "name" : "inside sadrzajDiv 118 to 122px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "118 to 122px",
+                  "realDistance" : "120px"
+                } ],
+                "highlight" : [ "dugmePotvrdi", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 91
+                },
+                "name" : "inside sadrzajDiv 49 to 53px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "49 to 53px",
+                  "realDistance" : "51px"
+                } ],
+                "highlight" : [ "dugmePotvrdi", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testUnosMobitel.gspec",
+                  "lineNumber" : 92
+                },
+                "name" : "inside sadrzajDiv 407 to 411px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "dugmePotvrdi",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "407 to 411px",
+                  "realDistance" : "409px"
+                } ],
+                "highlight" : [ "dugmePotvrdi", "sadrzajDiv" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meniDiv" : {
+              "area" : [ 54, 75, 392, 204 ]
+            },
+            "inputNaziv" : {
+              "area" : [ 172, 363, 156, 26 ]
+            },
+            "labelBrojMjesta" : {
+              "area" : [ 150, 425, 200, 23 ]
+            },
+            "meniItemSale" : {
+              "area" : [ 66, 172, 377, 24 ]
+            },
+            "meniItemUnos" : {
+              "area" : [ 66, 196, 377, 24 ]
+            },
+            "dugmePotvrdi" : {
+              "area" : [ 175, 698, 150, 35 ]
+            },
+            "meniItemPocetna" : {
+              "area" : [ 66, 148, 377, 24 ]
+            },
+            "inputBrojMjesta" : {
+              "area" : [ 172, 448, 156, 26 ]
+            },
+            "viewport" : {
+              "area" : [ 0, 0, 500, 721 ]
+            },
+            "sadrzajDiv" : {
+              "area" : [ 55, 289, 390, 495 ]
+            },
+            "labelNaziv" : {
+              "area" : [ 150, 340, 200, 23 ]
+            },
+            "logo" : {
+              "area" : [ 200, 35, 100, 80 ]
+            },
+            "meniItemRezervacije" : {
+              "area" : [ 66, 220, 377, 24 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: testUnosMobitel.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573659389679,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "meniDiv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemPocetna" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "inputBrojMjesta" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "inputNaziv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzajDiv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labelNaziv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labelBrojMjesta" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "logo" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemSale" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemUnos" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemRezervacije" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "dugmePotvrdi" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              }
+            },
+            "totalPassed" : 120,
+            "totalFailed" : 0,
+            "totalMutations" : 120,
+            "failedRatio" : 0.0
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573659384431,
+        "type" : "node"
+      } ],
+      "time" : 1573659382411,
+      "type" : "node"
+    } ]
+  }
+}

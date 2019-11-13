@@ -1,0 +1,790 @@
+{
+  "testId" : "1-testsalemobitel.gspec",
+  "name" : "testSaleMobitel.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  testSaleMobitel.gspec --url http://localhost:8080/sale.html --size 480x800 --offset 4 --htmlreport izvjestajSaleMobitel",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: testSaleMobitel.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573659443466,
+          "sections" : [ {
+            "name" : "MENI",
+            "place" : {
+              "filePath" : "testSaleMobitel.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "width 98 to 102px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "98 to 102px",
+                  "realDistance" : "100px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "logo", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "height 78 to 82px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "78 to 82px",
+                  "realDistance" : "80px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside viewport 33 to 37px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "viewport",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "33 to 37px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "logo", "viewport" ]
+              } ]
+            }, {
+              "name" : "meniDiv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "width 78 to 82% of viewport/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "78 to 82% [390 to 410px]",
+                  "realDistance" : "78% [392px]"
+                } ],
+                "highlight" : [ "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "meniDiv", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "height 202 to 206px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "202 to 206px",
+                  "realDistance" : "204px"
+                } ],
+                "highlight" : [ "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "inside viewport 73 to 77px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "viewport",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "73 to 77px",
+                  "realDistance" : "75px"
+                } ],
+                "highlight" : [ "meniDiv", "viewport" ]
+              } ]
+            }, {
+              "name" : "meniItemPocetna",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 25
+                },
+                "name" : "inside meniDiv 105 to 109px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "105 to 109px",
+                  "realDistance" : "107px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside meniDiv 72 to 76px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "72 to 76px",
+                  "realDistance" : "73px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemPocetna",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemPocetna", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemSale",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "inside meniDiv 81 to 85px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "81 to 85px",
+                  "realDistance" : "83px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "inside meniDiv 95 to 99px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "95 to 99px",
+                  "realDistance" : "97px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemSale",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemSale", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemUnos",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "inside meniDiv 57 to 61px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "57 to 61px",
+                  "realDistance" : "59px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "inside meniDiv 119 to 123px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "119 to 123px",
+                  "realDistance" : "121px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemUnos",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemUnos", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "meniItemRezervacije",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "inside meniDiv 33 to 37px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "33 to 37px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "inside meniDiv 143 to 147px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "143 to 147px",
+                  "realDistance" : "145px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "inside meniDiv 10 to 14px left",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "10 to 14px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "inside meniDiv 1 to 5px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meniItemRezervacije",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "1 to 5px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "meniItemRezervacije", "meniDiv" ]
+              } ]
+            } ]
+          }, {
+            "name" : "SADRZAJ",
+            "place" : {
+              "filePath" : "testSaleMobitel.gspec",
+              "lineNumber" : 45
+            },
+            "objects" : [ {
+              "name" : "sadrzajDiv",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "width 78 to 92% of viewport/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "78 to 92% [390 to 460px]",
+                  "realDistance" : "78% [390px]"
+                } ],
+                "highlight" : [ "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height 575 to 579px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "575 to 579px",
+                  "realDistance" : "577px"
+                } ],
+                "highlight" : [ "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "centered horizontally inside viewport",
+                "highlight" : [ "sadrzajDiv", "viewport" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 50
+                },
+                "name" : "below meniDiv 8 to 12px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meniDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "8 to 12px",
+                  "realDistance" : "10px"
+                } ],
+                "highlight" : [ "sadrzajDiv", "meniDiv" ]
+              } ]
+            }, {
+              "name" : "tabelaSala",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 52
+                },
+                "name" : "centered horizontally inside sadrzajDiv",
+                "highlight" : [ "tabelaSala", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "width 87 to 91% of sadrzajDiv/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "87 to 91% [339 to 354px]",
+                  "realDistance" : "89% [348px]"
+                } ],
+                "highlight" : [ "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 74 to 78% of sadrzajDiv/height",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "tabelaSala",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "74 to 78% [426 to 450px]",
+                  "realDistance" : "76% [441px]"
+                } ],
+                "highlight" : [ "tabelaSala" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 55
+                },
+                "name" : "inside sadrzajDiv 24 to 28px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "24 to 28px",
+                  "realDistance" : "26px"
+                } ],
+                "highlight" : [ "tabelaSala", "sadrzajDiv" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 56
+                },
+                "name" : "inside sadrzajDiv 108 to 112px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "tabelaSala",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzajDiv",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "108 to 112px",
+                  "realDistance" : "110px"
+                } ],
+                "highlight" : [ "tabelaSala", "sadrzajDiv" ]
+              } ]
+            }, {
+              "name" : "naslovSpratovi",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 58
+                },
+                "name" : "absent",
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "naslovRedni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "testSaleMobitel.gspec",
+                  "lineNumber" : 60
+                },
+                "name" : "absent",
+                "highlight" : [ ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meniDiv" : {
+              "area" : [ 54, 75, 392, 204 ]
+            },
+            "meniItemPocetna" : {
+              "area" : [ 66, 148, 377, 24 ]
+            },
+            "viewport" : {
+              "area" : [ 0, 0, 500, 721 ]
+            },
+            "sadrzajDiv" : {
+              "area" : [ 55, 289, 390, 577 ]
+            },
+            "logo" : {
+              "area" : [ 200, 35, 100, 80 ]
+            },
+            "meniItemSale" : {
+              "area" : [ 66, 172, 377, 24 ]
+            },
+            "meniItemUnos" : {
+              "area" : [ 66, 196, 377, 24 ]
+            },
+            "meniItemRezervacije" : {
+              "area" : [ 66, 220, 377, 24 ]
+            },
+            "tabelaSala" : {
+              "area" : [ 76, 315, 348, 441 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: testSaleMobitel.gspec included tags: ",
+          "status" : "error",
+          "time" : 1573659443466,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "meniDiv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "naslovSpratovi" : {
+                "passed" : 0,
+                "failed" : 10,
+                "failedMutations" : [ "naslovSpratovi: drag left by 4px", "naslovSpratovi: drag right by 4px", "naslovSpratovi: drag top by 4px", "naslovSpratovi: drag down by 4px", "naslovSpratovi: increase width by 4px", "naslovSpratovi: decrease width by 4px", "naslovSpratovi: increase height by 4px", "naslovSpratovi: decrease height by 4px", "naslovSpratovi: move left edge right by 4px", "naslovSpratovi: move top edge down by 4px" ]
+              },
+              "meniItemPocetna" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzajDiv" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "logo" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemSale" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemUnos" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meniItemRezervacije" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "naslovRedni" : {
+                "passed" : 0,
+                "failed" : 10,
+                "failedMutations" : [ "naslovRedni: drag left by 4px", "naslovRedni: drag right by 4px", "naslovRedni: drag top by 4px", "naslovRedni: drag down by 4px", "naslovRedni: increase width by 4px", "naslovRedni: decrease width by 4px", "naslovRedni: increase height by 4px", "naslovRedni: decrease height by 4px", "naslovRedni: move left edge right by 4px", "naslovRedni: move top edge down by 4px" ]
+              },
+              "tabelaSala" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              }
+            },
+            "totalPassed" : 80,
+            "totalFailed" : 20,
+            "totalMutations" : 100,
+            "failedRatio" : 20.0
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573659439491,
+        "type" : "node"
+      } ],
+      "time" : 1573659437487,
+      "type" : "node"
+    } ]
+  }
+}

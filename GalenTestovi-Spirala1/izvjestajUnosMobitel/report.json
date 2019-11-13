@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "testUnosMobitel.gspec",
+    "startedAt" : 1573659382407,
+    "endedAt" : 1573659389758,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 64,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 64
+    },
+    "testId" : "1-testunosmobitel.gspec",
+    "duration" : 7351,
+    "failed" : false
+  } ]
+}

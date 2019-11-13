@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+	<title>WT - Projekat</title>
+	
+  <head>
+		<link rel="stylesheet" href="rezervacije.css">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<div class="okvir">
+			<div class="logo">
+				<img src="logolav.jpg" alt="Logo">
+			</div>
+			<div class="meni">
+				<ul>
+          <li><a id="Pocetna" href="pocetna.html">Početna</a></li>
+          <li><a id="Sale" href="sale.html">Sale</a></li>
+          <li><a id="Unos" href="unos.html">Unos</a></li>
+          <li><a id ="Rezervacije" href="rezervacije.html">Rezervacije</a></li>
+          <li><a id ="Osobe" href="">Osobe</a></li>
+				</ul>
+			</div>
+			<div class="sadrzaj">	
+				<label for="listaSala">Sala</label>
+  					<select id="listaSala">
+  						<option value="0-01">0-01</option>
+  						<option value="1-01">1-01</option>
+  						<option value="0-02">0-02</option>
+  						<option value="1-02">1-02</option>
+					</select><br><br>
+  					<label for="periodicnaRezervacija">Periodična rezervacija</label>
+  					<input type="checkbox" name="periodicnaRezervacija" id="periodicnaRezervacija"><br><br>
+  					<label for="pocetak">Početak</label>
+  					<input type="time" name="pocetak" id="pocetak"><br><br>
+  					<label for="kraj">Kraj</label>
+  					<input type="time" name="kraj" id="kraj"><br><br>
+  					<br><br><br>
+  					<table id="kalendar">
+  						<th colspan="7">Novembar</th>
+  						<tr>
+  							<td class="dani">PON</td>
+  							<td class="dani">UTO</td>
+  							<td class="dani">SRI</td>
+  							<td class="dani">ČET</td>
+  							<td class="dani">PET</td>
+  							<td class="dani">SUB</td>
+  							<td class="dani">NED</td>
+  						</tr>
+  						<tr>
+  							<td></td>
+  							<td></td>
+  							<td></td>
+  							<td></td>
+  							<td class="slobodno">1</td>
+  							<td class="slobodno">2</td>
+  							<td class="slobodno">3</td>
+  						</tr>
+  						<tr>
+  							<td class="slobodno">4</td>
+  							<td class="zauzeto">5</td>
+  							<td class="slobodno">6</td>
+  							<td class="slobodno">7</td>
+  							<td class="slobodno">8</td>
+  							<td class="slobodno">9</td>
+  							<td class="slobodno">10</td>
+  						</tr>
+  						<tr><td class="slobodno">11</td>
+  							<td class="zauzeto">12</td>
+  							<td class="slobodno">13</td>
+  							<td class="slobodno">14</td>
+  							<td class="slobodno">15</td>
+  							<td class="slobodno">16</td>
+  							<td class="slobodno">17</td></tr>
+  						<tr>
+  							<td class="slobodno">18</td>
+  							<td class="zauzeto">19</td>
+  							<td class="slobodno">20</td>
+  							<td class="slobodno">21</td>
+  							<td class="slobodno">22</td>
+  							<td class="slobodno">23</td>
+  							<td class="slobodno">24</td>
+  						</tr>
+  						<tr>
+  							<td class="slobodno">25</td>
+  							<td class="zauzeto">26</td>
+  							<td class="slobodno">27</td>
+  							<td class="slobodno">28</td>
+  							<td class="slobodno">29</td>
+  							<td class="slobodno">30</td>
+  							<td></td>
+  						</tr>
+  					</table>
+  					<button id="prethodni">Prethodni</p>
+  					<button id="sljedeci">Sljedeći</p>
+			</div>
+		</div>	
+	</body>
+</html>

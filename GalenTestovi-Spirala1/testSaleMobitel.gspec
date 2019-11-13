@@ -1,0 +1,60 @@
+@objects
+	logo				css 								.logo
+	meniDiv				css									.meni
+	meniItemPocetna 	xpath								//div[@class='meni']/ul/li[1]
+	meniItemSale 		xpath 								//div[@class='meni']/ul/li[2]
+	meniItemUnos 		xpath								//div[@class='meni']/ul/li[3]
+	meniItemRezervacije xpath								//div[@class='meni']/ul/li[4]
+	sadrzajDiv			css									.sadrzaj
+	tabelaSala			css 								.tabelaSala
+	naslovSpratovi		css 								#naslovSprat
+	naslovRedni			css 								#naslovRedni
+
+= MENI =
+	logo:
+		width 98 to 102px
+		centered horizontally inside viewport
+		height 78 to 82px
+		inside viewport 33 to 37px top	
+	meniDiv:
+		width 78 to 82% of viewport/width
+		centered horizontally inside viewport
+		height 202 to 206px
+		inside viewport 73 to 77px top
+	meniItemPocetna:
+		inside meniDiv 105 to 109px bottom
+		inside meniDiv 72 to 76px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemSale:
+		inside meniDiv 81 to 85px bottom
+		inside meniDiv 95 to 99px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemUnos:
+		inside meniDiv 57 to 61px bottom
+		inside meniDiv 119 to 123px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+	meniItemRezervacije:
+		inside meniDiv 33 to 37px bottom
+		inside meniDiv 143 to 147px top
+		inside meniDiv 10 to 14px left
+		inside meniDiv 1 to 5px right
+
+= SADRZAJ =		
+	sadrzajDiv:
+		width 78 to 92% of viewport/width
+		height 575 to 579px
+		centered horizontally inside viewport
+    	below meniDiv 8 to 12px
+    tabelaSala:
+    	centered horizontally inside sadrzajDiv
+    	width 87 to 91% of sadrzajDiv/width
+    	height 74 to 78% of sadrzajDiv/height
+    	inside sadrzajDiv 24 to 28px top
+    	inside sadrzajDiv 108 to 112px bottom
+    naslovSpratovi:
+    	absent
+    naslovRedni:
+    	absent
