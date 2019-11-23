@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+	<title>WT - Projekat</title>
+	
+  <head>
+		<link rel="stylesheet" href="rezervacije.css">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<div class="okvir">
+			<div class="logo">
+				<img src="logolav.jpg" alt="Logo">
+			</div>
+			<div class="meni">
+				<ul>
+          <li><a id="Pocetna" href="pocetna.html">Početna</a></li>
+          <li><a id="Sale" href="sale.html">Sale</a></li>
+          <li><a id="Unos" href="unos.html">Unos</a></li>
+          <li><a id ="Rezervacije" href="rezervacije.html">Rezervacije</a></li>
+          <li><a id ="Osobe" href="">Osobe</a></li>
+				</ul>
+			</div>
+			<div class="sadrzaj">	
+				<label for="listaSala">Sala</label>
+  					<select id="listaSala" oninput="unosSala()">
+  						<option value="0-01">0-01</option>
+  						<option value="0-02">0-02</option>
+  						<option value="0-03">0-03</option>
+              <option value="0-04">0-04</option>
+              <option value="0-05">0-05</option>
+              <option value="0-06">0-06</option>
+              <option value="0-07">0-07</option>
+              <option value="0-08">0-08</option>
+  						<option value="0-09">0-09</option>
+              <option value="1-01">1-01</option>
+              <option value="1-02">1-02</option>
+              <option value="1-03">1-03</option>
+              <option value="1-04">1-04</option>
+              <option value="1-05">1-05</option>
+              <option value="1-06">1-06</option>
+              <option value="1-07">1-07</option>
+              <option value="1-08">1-08</option>
+              <option value="1-09">1-09</option>
+              <option value="2-01">2-01</option>
+              <option value="2-02">2-02</option>
+              <option value="2-03">2-03</option>
+              <option value="2-04">2-04</option>
+              <option value="2-05">2-05</option>
+              <option value="2-06">2-06</option>
+              <option value="2-07">2-07</option>
+              <option value="2-08">2-08</option>
+              <option value="2-09">2-09</option>
+              <option value="3-01">3-01</option>
+              <option value="3-02">3-02</option>
+              <option value="3-03">3-03</option>
+              <option value="3-04">3-04</option>
+              <option value="3-05">3-05</option>
+              <option value="3-06">3-06</option>
+              <option value="3-07">3-07</option>
+              <option value="3-08">3-08</option>
+              <option value="3-09">3-09</option>
+              <option value="VA1">VA1</option>
+              <option value="VA2">VA2</option>
+              <option value="MA">MA</option>
+              <option value="EE1">EE1</option>
+              <option value="EE2">EE2</option>
+					</select><br><br>
+  					<label for="periodicnaRezervacija">Periodična rezervacija</label>
+  					<input type="checkbox" name="periodicnaRezervacija" id="periodicnaRezervacija"><br><br>
+  					<label for="pocetak">Početak</label>
+  					<input type="time" name="pocetak" id="pocetak" oninput="unosPocetak()"><br><br>
+  					<label for="kraj">Kraj</label>
+  					<input type="time" name="kraj" id="kraj" oninput="unosKraj()"><br><br>
+  					<br><br><br>
+  					<table id="kalendar">
+  						<th colspan="7" id="nazivMjeseca">Novembar</th>
+  					</table>
+  					<button id="prethodni" onclick="clickPrethodni()">Prethodni</p>
+  					<button id="sljedeci" onclick="clickSljedeci()">Sljedeći</p>
+			</div>
+		</div>	 
+	</body>
+    <script src="kalendar.js"></script>
+</html>
