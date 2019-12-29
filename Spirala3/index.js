@@ -24,22 +24,13 @@ const pocetna_JS = "/pocetna.js";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('Slike'));
+//U public se nalaze samo slike koji trebaju za Zadatak3
+app.use(express.static('public'));
 
-app.get("/logolav.jpg",function(req,res){        
-	res.sendFile(__dirname + "/logolav.jpg" );
-});
-//Sekica ---ZAHTJEVI---
+
+//Sekcija ---HTML ZAHTJEVI---
 app.get("/",function(req,res){        
 	res.sendFile(__dirname + pocetna_HTML );
-});
-
-app.get(pozivi_JS,function(req,res){        
-	res.sendFile(__dirname + pozivi_JS );
-});
-
-app.get(pocetna_JS,function(req,res){        
-	res.sendFile(__dirname + pocetna_JS );
 });
 
 app.get(pocetna_HTML,function(req,res){        
@@ -58,6 +49,8 @@ app.get(rezervacije_HTML,function(req,res){
 	res.sendFile(__dirname + rezervacije_HTML );
 });
 
+
+//Sekcija ---CSS ZAHTJEVI---
 app.get(pocetna_CSS,function(req,res){        
 	res.sendFile(__dirname + pocetna_CSS );
 });
@@ -74,6 +67,17 @@ app.get(rezervacije_CSS,function(req,res){
 	res.sendFile(__dirname + rezervacije_CSS );
 });
 
+
+//Sekcija ---JS ZAHTJEVI---
+app.get(pozivi_JS,function(req,res){        
+	res.sendFile(__dirname + pozivi_JS );
+});
+
+app.get(pocetna_JS,function(req,res){        
+	res.sendFile(__dirname + pocetna_JS );
+});
+
+
 app.get(kalendar_JS,function(req,res){        
 	res.sendFile(__dirname + kalendar_JS );
 });
@@ -82,10 +86,19 @@ app.get(rezervacije_JS,function(req,res){
 	res.sendFile(__dirname + rezervacije_JS );
 });
 
+
+//Sekcija ---SLIKE ZAHTJEVI---
+
+app.get("/logolav.jpg",function(req,res){        
+	res.sendFile(__dirname + "/logolav.jpg" );
+});
+
+
 //---ZADATAK 1---
 app.get("/zauzeca",function(req,res){        
 	res.sendFile(__dirname + "/zauzeca.json" );
 });
+
 
 //---ZADATAK 2---
 app.post("/rezervacije",function(req,res){        
@@ -266,17 +279,18 @@ res.json(rezervacije);
 });
 });
 
+
 //---ZADATAK 3---
 app.get("/inicijalneSlike",function(req,res){   
 	fs.readdir("./Slike/", (err, files) => {
-		var sveSlike = { slike:[] };
+		var povratniInfo = { slike:[] };
 		var brojac = 0;
 		files.forEach(file => {
 			brojac++;
-			sveSlike.slike.push(file);
+			povratniInfo.slike.push(file);
 			if( brojac == 3 ) return;
 		});
-		res.json(sveSlike);
+		res.json(povratniInfo);
 	});
 
 });

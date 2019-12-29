@@ -65,16 +65,16 @@ let Pozivi = (function(){
             var ajax = new XMLHttpRequest();
             ajax.onreadystatechange = function() {
                 if (ajax.readyState == 4 && ajax.status == 200){
-                    var sveDohvaceneSlike = JSON.parse(ajax.responseText);   
+                    var vraceniInfo = JSON.parse(ajax.responseText);   
                     var prvaSlika = document.getElementById("prvaSlika");
                     var drugaSlika = document.getElementById("drugaSlika");
                     var trecaSlika = document.getElementById("trecaSlika"); 
                     prvaSlika.alt = ""; drugaSlika.alt = ""; trecaSlika.alt = "";
                     prvaSlika.src = "#"; drugaSlika.src = "#"; trecaSlika.src = "#";
-                    if( sveDohvaceneSlike.slike.length < 4 ) document.getElementById("dalje").disabled = true;
-                    if( sveDohvaceneSlike.slike.length > 0 ) prvaSlika.src = "http://localhost:8080/" + sveDohvaceneSlike.slike[0];
-                    if( sveDohvaceneSlike.slike.length > 1 )  drugaSlika.src = "http://localhost:8080/" + sveDohvaceneSlike.slike[1];     
-                    if( sveDohvaceneSlike.slike.length > 2  )  trecaSlika.src = "http://localhost:8080/" + sveDohvaceneSlike.slike[2];                   
+                    if( vraceniInfo.slike.length < 4 ) document.getElementById("dalje").disabled = true;
+                    if( vraceniInfo.slike.length > 0 ) prvaSlika.src = "/" + vraceniInfo.slike[0];
+                    if( vraceniInfo.slike.length > 1 )  drugaSlika.src = "/" + vraceniInfo.slike[1];   
+                    if( vraceniInfo.slike.length > 2  )  trecaSlika.src = "/" + vraceniInfo.slike[2];                 
                 }
                 if (ajax.readyState == 4 && ajax.status == 404)
                     alert("Error");
@@ -97,9 +97,9 @@ let Pozivi = (function(){
                     else document.getElementById("dalje").disabled = false;
                     if( vraceniInfo.disableNazad == 'DA' ) document.getElementById("nazad").disabled = true;
                     else document.getElementById("nazad").disabled = false;
-                    if( vraceniInfo.slike.length > 0 ) prvaSlika.src = "http://localhost:8080/" + vraceniInfo.slike[0];
-                    if( vraceniInfo.slike.length > 1 )  drugaSlika.src = "http://localhost:8080/" + vraceniInfo.slike[1];     
-                    if( vraceniInfo.slike.length > 2  )  trecaSlika.src = "http://localhost:8080/" + vraceniInfo.slike[2];                   
+                    if( vraceniInfo.slike.length > 0 ) prvaSlika.src = "/" + vraceniInfo.slike[0];
+                    if( vraceniInfo.slike.length > 1 )  drugaSlika.src = "/" + vraceniInfo.slike[1];     
+                    if( vraceniInfo.slike.length > 2  )  trecaSlika.src = "/" + vraceniInfo.slike[2];                  
                 }
 
                 if (ajax.readyState == 4 && ajax.status == 404)
