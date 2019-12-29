@@ -41,6 +41,8 @@ let Pozivi = (function(){
         danUSedmici--;
         if( (trenutniMjesec >= 10 && trenutniMjesec <= 12) || trenutniMjesec == 1 ) trenutniSemestar = "zimski";
         if( trenutniMjesec >= 2 && trenutniMjesec <= 6 ) trenutniSemestar = "ljetnji";
+        var stringCheckbox = "true";
+        if( !checkboxVrijednost ) stringCheckbox = "false";
         if( checkboxVrijednost ) ajax.send( JSON.stringify({
             dan: danUSedmici,
             semestar: trenutniSemestar,
@@ -48,7 +50,7 @@ let Pozivi = (function(){
             kraj: krajInput,
             naziv: odabranaSala,
             predavac: JohnDoe,
-            checkboxChecked: checkboxVrijednost,
+            checkboxChecked: stringCheckbox,
             trenutniMjesec: trenutniMjesec,
             trenutnaGodina: trenutnaGodina
         }) );
@@ -58,7 +60,7 @@ let Pozivi = (function(){
                 kraj: krajInput,
                 naziv: odabranaSala,
                 predavac: JohnDoe,
-                checkboxChecked: checkboxVrijednost
+                checkboxChecked: stringCheckbox
             }) );
 
         }

@@ -106,8 +106,32 @@ app.post("/rezervacije",function(req,res){
 	fs.readFile('zauzeca.json', (err, data) => {
 		if (err) throw err;
 		var rezervacije = JSON.parse(data);
+
+		//Provjera parametara za POSTMAN!!!
+		var regexPocetak = zahtjev.pocetak.match(/^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$/);
+		var regexKraj = zahtjev.kraj.match(/^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$/);
+		var regexDatumWrong = (zahtjev.datum && !zahtjev.datum.match(/^([0-9]|[0-2][0-9]|3[0-1])\.(0[0-9]|[0-9]|1[0-2])\.(\d{4})$/));
+		var regexDanWrong = (zahtjev.dan && !zahtjev.dan.toString().match(/^[0-6]$/));
+		var checkboxWrong = (zahtjev.checkboxChecked != "true" && zahtjev.checkboxChecked != "false");
+		var regexSala = zahtjev.naziv.match(/^[0-3]-0[0-9]$/);
+		var semestarWrong = ( zahtjev.semestar && ( zahtjev.semestar != "ljetnji" && zahtjev.semestar != "zimski" ) );
+		var trenutniMjesecWrong = ( zahtjev.trenutniMjesec && !zahtjev.trenutniMjesec.toString().match(/^(0?[1-9]|1[012])$/) );
+		var trenutnaGodinaWrong = ( zahtjev.trenutnaGodina && !zahtjev.trenutnaGodina.toString().match(/^[0-9]{1,4}$/) );
+		var pocetakIspredKraja = true;
+		if( regexPocetak && regexKraj ){
+			var pomocniPocetak = zahtjev.pocetak.split(":");
+			var pomocniKraj = zahtjev.kraj.split(":");
+			var pocetakSat = parseInt(pomocniPocetak[0]), krajSat = parseInt(pomocniKraj[0]), pocetakMinute = parseInt(pomocniPocetak[1]), krajMinute = parseInt(pomocniKraj[1]);
+			if( pocetakSat > krajSat ) pocetakIspredKraja = false;
+			if( pocetakSat == krajSat && pocetakMinute >= krajMinute ) pocetakIspredKraja = false;
+		}
+		if( !regexSala || regexDanWrong  || regexDatumWrong || checkboxWrong  || !regexPocetak || !regexKraj || semestarWrong || trenutniMjesecWrong || trenutnaGodinaWrong || !pocetakIspredKraja ){
+		 res.send("---GREŠKA---");
+		 return;
+		}
+		
 		//Checkbox vrijednost nam je potrebna iz zahtjeva, ali nije potrebna za pravu rezervaciju
-		var checkboxChecked = zahtjev.checkboxChecked;
+		var checkboxChecked = (zahtjev.checkboxChecked == "true");
 		var rezervacija = {};
 		if( checkboxChecked ){
 			for (var i = 0; i < rezervacije.periodicna.length; i++) {
