@@ -162,6 +162,7 @@ function getval(celija) {
 						}
 					}  
 				}
+				if( trenutniMjesec >= 7 && trenutniMjesec <= 9 ) paliAlert = true;
 				if( paliAlert ){
 					var dani = ["Ponedjeljak","Utorak","Srijeda","Četvrtak","Petak","Subota","Nedjelja"];
 					var danUSedmici = (new Date(trenutnaGodina,trenutniMjesec-1,celija.innerHTML)).getDay();

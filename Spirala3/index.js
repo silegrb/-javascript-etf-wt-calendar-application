@@ -155,30 +155,32 @@ app.post("/rezervacije",function(req,res){
 	}
 }
 
-			for (var i = 0; i < rezervacije.vanredna.length; i++) {
-				var vanrednaRezervacija = rezervacije.vanredna[i];
-				var poklapanje = false;
-				var pocetak = vanrednaRezervacija.pocetak;
-				var kraj = vanrednaRezervacija.kraj;
-				var pocetakZahtjev = zahtjev.pocetak;
-				var krajZahtjev = zahtjev.kraj;
-				var minutePocetakZahtjev, minutePocetak, minuteKrajZahtjev, minuteKraj;
-				var pomocniString = pocetakZahtjev.split(":");
-				var pomocniDatum = vanrednaRezervacija.datum.split(".");
-				var dan = parseInt( pomocniDatum[0] ), mjesec = parseInt(pomocniDatum[1]), godina = parseInt(pomocniDatum[2]);
-				var danUSedmici = (new Date(godina,mjesec-1,dan)).getDay();
-				if( danUSedmici == 0 ) danUSedmici += 7;
-				danUSedmici--;
-				minutePocetakZahtjev = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+for (var i = 0; i < rezervacije.vanredna.length; i++) {
+	var vanrednaRezervacija = rezervacije.vanredna[i];
+	var poklapanje = false;
+	var pocetak = vanrednaRezervacija.pocetak;
+	var kraj = vanrednaRezervacija.kraj;
+	var pocetakZahtjev = zahtjev.pocetak;
+	var krajZahtjev = zahtjev.kraj;
+	var minutePocetakZahtjev, minutePocetak, minuteKrajZahtjev, minuteKraj;
+	var pomocniString = pocetakZahtjev.split(":");
+	var pomocniDatum = vanrednaRezervacija.datum.split(".");
+	var dan = parseInt( pomocniDatum[0] ), mjesec = parseInt(pomocniDatum[1]), godina = parseInt(pomocniDatum[2]);
+	var danUSedmici = (new Date(godina,mjesec-1,dan)).getDay();
+	if( danUSedmici == 0 ) danUSedmici += 7;
+	var poklapanjeSaFormom = false;
+	if( zahtjev.trenutniMjesec == mjesec && zahtjev.trenutnaGodina == godina ) poklapanjeSaFormom = true;
+	danUSedmici--;
+	minutePocetakZahtjev = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
 
-				pomocniString = pocetak.split(":");
-				minutePocetak = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+	pomocniString = pocetak.split(":");
+	minutePocetak = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
 
-				pomocniString = krajZahtjev.split(":");
-				minuteKrajZahtjev = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+	pomocniString = krajZahtjev.split(":");
+	minuteKrajZahtjev = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
 
-				pomocniString = kraj.split(":");
-				minuteKraj = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+	pomocniString = kraj.split(":");
+	minuteKraj = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
 
 	// Redom moguci slucajevi - testiranje presjeka dva vremenska intervala
 	if( minutePocetakZahtjev >  minuteKrajZahtjev ) poklapanje = true;
@@ -191,8 +193,9 @@ app.post("/rezervacije",function(req,res){
 	if( minutePocetakZahtjev <= minutePocetak && minuteKraj <= minuteKrajZahtjev ) poklapanje = true;
 	if( minutePocetak <= minutePocetakZahtjev && minuteKrajZahtjev <= minuteKraj ) poklapanje = true;
 	
-	if( danUSedmici == zahtjev.dan && vanrednaRezervacija.naziv == zahtjev.naziv && poklapanje ){
+	if( danUSedmici == zahtjev.dan && poklapanjeSaFormom && vanrednaRezervacija.naziv == zahtjev.naziv && poklapanje ){
 		var dani = ["Ponedjeljak","Utorak","Srijeda","Četvrtak","Petak","Subota","Nedjelja"];
+
 		var alertText = "Nije moguće rezervisati salu " + zahtjev.naziv + " za navedeni dan " + dani[zahtjev.dan] +" i termin od " + zahtjev.pocetak + " do " + zahtjev.kraj +"!";
 		fs.writeFile('zauzeca.json', JSON.stringify(rezervacije), function(err){
 			if(err) throw err;
@@ -332,12 +335,15 @@ res.json(rezervacije);
 //---ZADATAK 3---
 app.get("/inicijalneSlike",function(req,res){   
 	fs.readdir("./public/", (err, files) => {
-		var povratniInfo = { slike:[] };
+		var povratniInfo = { slike:[], neZovemVise: 'DA' };
 		var brojac = 0;
 		files.forEach(file => {
 			brojac++;
+			if( brojac > 3 ){
+				povratniInfo.neZovemVise = 'NE'
+				return;
+			} 
 			povratniInfo.slike.push(file);
-			if( brojac == 3 ) return;
 		});
 		res.json(povratniInfo);
 	});
@@ -345,39 +351,33 @@ app.get("/inicijalneSlike",function(req,res){
 });
 
 app.get("/izmjenaSlika",function(req,res){   
-	fs.readdir("./public/", (err, files) => {
-		var sveSlike = { slike:[] };
-		files.forEach(file => {
+		fs.readdir("./public/", (err, files) => {
+		var zahtjev = req.query;
+	var sveSlike = {slike:[]};
+	files.forEach(file => {
 			sveSlike.slike.push(file);
 		});
-		var povratniInfo = {slike:[],disableNazad:'NE',disableDalje:'NE'};
-		if( req.query.jesteDalje == 1 ){
-			var indexDalje = -1;
-			for( var i = 0; i < sveSlike.slike.length; i++ ){
-				if( req.query.treca == sveSlike.slike[i] ){
-					indexDalje = i + 1;
-					break;
-				}
+	var povratniInfo = {slike:[],disableNazad:'NE',disableDalje:'NE', neZovemVise: 'NE'};
+		var indexDalje = -1;
+		for( var i = 0; i < sveSlike.slike.length; i++ ){
+			if( zahtjev.treca == sveSlike.slike[i] ){
+				indexDalje = i + 1;
+				break;
 			}
-			if( indexDalje + 3 > sveSlike.slike.length - 1 ) povratniInfo.disableDalje = 'DA';
-			for( var i = indexDalje; i < sveSlike.slike.length; i++ )
-				povratniInfo.slike.push( sveSlike.slike[i] );
-			res.json(povratniInfo);
 		}
-		else{
-			var indexNazad = -1;
-			for( var i = 0; i < sveSlike.slike.length; i++ ){
-				if( req.query.prva == sveSlike.slike[i] ){
-					indexNazad = i - 1;
-					break;
-				}
-			}
-			if( indexNazad == 2 ) povratniInfo.disableNazad = 'DA';
-			for( var i = indexNazad - 2; i <= indexNazad; i++ )
-				povratniInfo.slike.push( sveSlike.slike[i] );
-			res.json(povratniInfo);			
+		if( indexDalje + 3 > sveSlike.slike.length - 1 ) povratniInfo.disableDalje = 'DA';
+		var brojac = 0;
+		for( var i = indexDalje; i < sveSlike.slike.length; i++ ){
+			brojac++;
+			povratniInfo.slike.push( sveSlike.slike[i] );
+			if( brojac == 3 ) break;
 		}
+		if( povratniInfo.slike.length < 3 || (povratniInfo.slike.length == 3 && povratniInfo.disableDalje == 'DA') )
+			povratniInfo.neZovemVise = 'DA';
+		res.json(povratniInfo);
 	});
+	
+	
 
 });
 

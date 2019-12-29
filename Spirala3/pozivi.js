@@ -48,7 +48,9 @@ let Pozivi = (function(){
             kraj: krajInput,
             naziv: odabranaSala,
             predavac: JohnDoe,
-            checkboxChecked: checkboxVrijednost
+            checkboxChecked: checkboxVrijednost,
+            trenutniMjesec: trenutniMjesec,
+            trenutnaGodina: trenutnaGodina
         }) );
             else ajax.send( JSON.stringify({
                 datum: odabraniDatum,
@@ -65,7 +67,10 @@ let Pozivi = (function(){
             var ajax = new XMLHttpRequest();
             ajax.onreadystatechange = function() {
                 if (ajax.readyState == 4 && ajax.status == 200){
-                    var vraceniInfo = JSON.parse(ajax.responseText);   
+                    var vraceniInfo = JSON.parse(ajax.responseText);  
+                    for( var i = 0; i < vraceniInfo.slike.length; i++ )
+                        ucitaneSlike.slike.push(vraceniInfo.slike[i]); 
+                    if( vraceniInfo.neZovemVise == 'DA' ){ neZoviViseServer = true; document.getElementById("dalje").disabled = true;}
                     var prvaSlika = document.getElementById("prvaSlika");
                     var drugaSlika = document.getElementById("drugaSlika");
                     var trecaSlika = document.getElementById("trecaSlika");
@@ -80,22 +85,21 @@ let Pozivi = (function(){
                     treciDiv.style.visibility = 'visible';
 
 
-                    if( vraceniInfo.slike.length < 4 ) document.getElementById("dalje").disabled = true;
                     
-                    if( vraceniInfo.slike.length > 0 ){ 
-                        prvaSlika.src = "/" + vraceniInfo.slike[0];
+                    if( ucitaneSlike.slike.length > 0 ){ 
+                        prvaSlika.src = "/" + ucitaneSlike.slike[0];
                         prvaSlika.alt = "PrvaSlikaUcitana";
                     }
-                    if( vraceniInfo.slike.length > 1 ){
-                      drugaSlika.src = "/" + vraceniInfo.slike[1];    
+                    if( ucitaneSlike.slike.length > 1 ){
+                      drugaSlika.src = "/" + ucitaneSlike.slike[1];    
                       drugaSlika.alt = "DrugaSlikaUcitana"; 
                   }
-                  if( vraceniInfo.slike.length > 2  ){
-                      trecaSlika.src = "/" + vraceniInfo.slike[2];
+                  if( ucitaneSlike.slike.length > 2  ){
+                      trecaSlika.src = "/" + ucitaneSlike.slike[2];
                       trecaSlika.alt = "TrecaSlikaUcitana"
                   }
                   if( prvaSlika.alt == "PrvaSlika" )   prviDiv.style.visibility = 'hidden';  
-                  if( drugaSlika.alt == "DrugaSlika" ) {  drugiDiv.style.visibility = 'hidden';  console.log("ok"); }         
+                  if( drugaSlika.alt == "DrugaSlika" )  drugiDiv.style.visibility = 'hidden';          
                   if( trecaSlika.alt == "TrecaSlika" )   treciDiv.style.visibility = 'hidden';            
 
 
@@ -107,11 +111,15 @@ let Pozivi = (function(){
         ajax.send();
     }
 
-    function izmjenaSlikaImpl(jesteDalje){
+    function izmjenaSlikaImpl(){
         var ajax = new XMLHttpRequest();
         ajax.onreadystatechange = function() {
             if (ajax.readyState == 4 && ajax.status == 200){
-                var vraceniInfo = JSON.parse(ajax.responseText);   
+
+                var vraceniInfo = JSON.parse(ajax.responseText);  
+                for( var i = 0; i < vraceniInfo.slike.length; i++ )
+                    ucitaneSlike.slike.push( vraceniInfo.slike[i] );
+                    if( vraceniInfo.neZovemVise == 'DA' ) neZoviViseServer = true; 
                 var prvaSlika = document.getElementById("prvaSlika");
                 var drugaSlika = document.getElementById("drugaSlika");
                 var trecaSlika = document.getElementById("trecaSlika");
@@ -144,20 +152,17 @@ let Pozivi = (function(){
               }
               
               if( prvaSlika.alt == "PrvaSlika" )   prviDiv.style.visibility = 'hidden';  
-              if( drugaSlika.alt == "DrugaSlika" ) {  drugiDiv.style.visibility = 'hidden';  console.log("ok"); }         
+              if( drugaSlika.alt == "DrugaSlika" )  drugiDiv.style.visibility = 'hidden';     
               if( trecaSlika.alt == "TrecaSlika" )   treciDiv.style.visibility = 'hidden';   
           }
 
           if (ajax.readyState == 4 && ajax.status == 404)
             alert("Error");
     }
-    var imgJedan = document.getElementById("prvaSlika").src.split("/");
-    var prviZahtjev = imgJedan[imgJedan.length - 1];
-    var imgDva = document.getElementById("drugaSlika").src.split("/");
-    var drugiZahtjev = imgDva[imgDva.length - 1];
+  
     var imgTri = document.getElementById("trecaSlika").src.split("/");
     var treciZahtjev = imgTri[imgTri.length - 1];
-    ajax.open("GET", "izmjenaSlika?prva=" + prviZahtjev + "&treca=" + treciZahtjev + "&jesteDalje=" + jesteDalje, true);
+    ajax.open("GET", "izmjenaSlika?treca=" + treciZahtjev, true);
     ajax.send();
 }
 

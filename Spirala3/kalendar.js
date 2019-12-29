@@ -37,9 +37,10 @@ let Kalendar = (function(){
 		for( var i = 0; i < nizVandrednihRezervacija.length; i++ ){
 		//Poklapaju li se informacije sa forme?
 		var splitDatuma = nizVandrednihRezervacija[i].datum.split(".");
-		var dan = splitDatuma[0];
+		var dan = parseInt(splitDatuma[0]);
 		var mjesec = parseInt(splitDatuma[1]);
-		if( poklapanjeForma( nizVandrednihRezervacija[i].naziv, nizVandrednihRezervacija[i].pocetak, nizVandrednihRezervacija[i].kraj ) && mjesec == trenutniMjesec ){
+		var godina = parseInt(splitDatuma[2]);
+		if( poklapanjeForma( nizVandrednihRezervacija[i].naziv, nizVandrednihRezervacija[i].pocetak, nizVandrednihRezervacija[i].kraj ) && mjesec == trenutniMjesec && godina == trenutnaGodina ){
 			noMatch = false;
 			newNoMatch = false;
 			//Da li se trenutni mjesec nalazi u semestru ove rezervacije?
