@@ -49,8 +49,17 @@ function clickNazad(){
 }
 
 function clickDalje(){
-	document.getElementById("nazad").disabled = false;
-	if(  neZoviViseServer ){
+		document.getElementById("nazad").disabled = false;
+	var vecUcitana = false;
+	var temp = document.getElementById("trecaSlika").src.split("/");
+	var trecaSlika = temp[temp.length-1];
+	var indexTrece = -1;
+	for( var i = 0; i < ucitaneSlike.slike.length; i++ )
+		if( trecaSlika == ucitaneSlike.slike[i] ) indexTrece = i;
+	if( ucitaneSlike.slike.length - 1 - indexTrece >= 3 ) vecUcitana = true;
+	if( ucitaneSlike.slike.length > 3 && temp[temp.length-1] == ucitaneSlike.slike[ucitaneSlike.slike.length-3] ) vecUcitana = true;
+	if(  neZoviViseServer || vecUcitana ){
+
 		var slikaTri = document.getElementById("trecaSlika").src.split("/");
 		var nazivSlikeTri = slikaTri[slikaTri.length-1];
 		var indexDalje = -1;
@@ -63,6 +72,7 @@ function clickDalje(){
 			vraceniInfo.slike.push( ucitaneSlike.slike[i] );
 		if( indexDalje + 3 > ucitaneSlike.slike.length - 1 ) document.getElementById("dalje").disabled = true;
 		else document.getElementById("dalje").disabled = false;
+		if( !neZoviViseServer )document.getElementById("dalje").disabled = false;
 		var prvaSlika = document.getElementById("prvaSlika");
 		var drugaSlika = document.getElementById("drugaSlika");
 		var trecaSlika = document.getElementById("trecaSlika");
