@@ -132,7 +132,6 @@ app.post("/rezervacije",function(req,res){
 				minuteKraj = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
 
 	// Redom moguci slucajevi - testiranje presjeka dva vremenska intervala
-	//Prvi slucaj predstavlja provjeru/validaciju da li je pocetak zaista ispred kraja
 	if( minutePocetakZahtjev >  minuteKrajZahtjev ) poklapanje = true;
 	if( minuteKrajZahtjev <= minutePocetak ) poklapanje = true;
 	if( minuteKraj <= minutePocetakZahtjev ) poklapanje = true;
@@ -144,6 +143,55 @@ app.post("/rezervacije",function(req,res){
 	if( minutePocetak <= minutePocetakZahtjev && minuteKrajZahtjev <= minuteKraj ) poklapanje = true;
 	
 	if( periodicnaRezervacija.dan == zahtjev.dan && periodicnaRezervacija.semestar == zahtjev.semestar && periodicnaRezervacija.naziv == zahtjev.naziv && poklapanje ){
+		var dani = ["Ponedjeljak","Utorak","Srijeda","Četvrtak","Petak","Subota","Nedjelja"];
+		var alertText = "Nije moguće rezervisati salu " + zahtjev.naziv + " za navedeni dan " + dani[zahtjev.dan] +" i termin od " + zahtjev.pocetak + " do " + zahtjev.kraj +"!";
+		fs.writeFile('zauzeca.json', JSON.stringify(rezervacije), function(err){
+			if(err) throw err;
+		});
+		rezervacije.alertPoruka = alertText;
+
+		res.json(rezervacije);
+		return;
+	}
+}
+
+			for (var i = 0; i < rezervacije.vanredna.length; i++) {
+				var vanrednaRezervacija = rezervacije.vanredna[i];
+				var poklapanje = false;
+				var pocetak = vanrednaRezervacija.pocetak;
+				var kraj = vanrednaRezervacija.kraj;
+				var pocetakZahtjev = zahtjev.pocetak;
+				var krajZahtjev = zahtjev.kraj;
+				var minutePocetakZahtjev, minutePocetak, minuteKrajZahtjev, minuteKraj;
+				var pomocniString = pocetakZahtjev.split(":");
+				var pomocniDatum = vanrednaRezervacija.datum.split(".");
+				var dan = parseInt( pomocniDatum[0] ), mjesec = parseInt(pomocniDatum[1]), godina = parseInt(pomocniDatum[2]);
+				var danUSedmici = (new Date(godina,mjesec-1,dan)).getDay();
+				if( danUSedmici == 0 ) danUSedmici += 7;
+				danUSedmici--;
+				minutePocetakZahtjev = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+
+				pomocniString = pocetak.split(":");
+				minutePocetak = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+
+				pomocniString = krajZahtjev.split(":");
+				minuteKrajZahtjev = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+
+				pomocniString = kraj.split(":");
+				minuteKraj = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
+
+	// Redom moguci slucajevi - testiranje presjeka dva vremenska intervala
+	if( minutePocetakZahtjev >  minuteKrajZahtjev ) poklapanje = true;
+	if( minuteKrajZahtjev <= minutePocetak ) poklapanje = true;
+	if( minuteKraj <= minutePocetakZahtjev ) poklapanje = true;
+	if( minutePocetakZahtjev < minutePocetak && minutePocetak < minuteKrajZahtjev ) poklapanje = true;
+	if( minutePocetakZahtjev < minuteKraj && minuteKraj < minuteKrajZahtjev ) poklapanje = true;
+	if( minutePocetak == minutePocetakZahtjev && minutePocetakZahtjev != minuteKrajZahtjev ) poklapanje = true;
+	if( minuteKrajZahtjev == minuteKraj && minutePocetakZahtjev != minuteKrajZahtjev ) poklapanje = true;
+	if( minutePocetakZahtjev <= minutePocetak && minuteKraj <= minuteKrajZahtjev ) poklapanje = true;
+	if( minutePocetak <= minutePocetakZahtjev && minuteKrajZahtjev <= minuteKraj ) poklapanje = true;
+	
+	if( danUSedmici == zahtjev.dan && vanrednaRezervacija.naziv == zahtjev.naziv && poklapanje ){
 		var dani = ["Ponedjeljak","Utorak","Srijeda","Četvrtak","Petak","Subota","Nedjelja"];
 		var alertText = "Nije moguće rezervisati salu " + zahtjev.naziv + " za navedeni dan " + dani[zahtjev.dan] +" i termin od " + zahtjev.pocetak + " do " + zahtjev.kraj +"!";
 		fs.writeFile('zauzeca.json', JSON.stringify(rezervacije), function(err){
@@ -193,7 +241,6 @@ else{
 				minuteKraj = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
 
 	// Redom moguci slucajevi - testiranje presjeka dva vremenska intervala
-	//Prvi slucaj predstavlja provjeru/validaciju da li je pocetak zaista ispred kraja
 	if( minutePocetakZahtjev >  minuteKrajZahtjev ) poklapanje = true;
 	if( minuteKrajZahtjev <= minutePocetak ) poklapanje = true;
 	if( minuteKraj <= minutePocetakZahtjev ) poklapanje = true;
@@ -222,6 +269,9 @@ else{
 				var danUSedmici = (new Date(godina,mjesec-1,dan)).getDay();
 				if( danUSedmici == 0 ) danUSedmici += 7;
 				danUSedmici--;
+				var pravilanSemestar = false;
+				if( periodicnaRezervacija.semestar == "ljetnji" && mjesec >= 2 && mjesec <= 6 ) pravilanSemestar = true;
+				if( periodicnaRezervacija.semestar == "zimski" && (mjesec >= 10 && mjesec <= 12) || mjesec == 1 ) pravilanSemestar = true;
 
 				var poklapanje = false;
 				var pocetak = periodicnaRezervacija.pocetak;
@@ -243,7 +293,6 @@ else{
 				minuteKraj = parseInt(pomocniString[0])*60 + parseInt(pomocniString[1]);
 
 	// Redom moguci slucajevi - testiranje presjeka dva vremenska intervala
-	//Prvi slucaj predstavlja provjeru/validaciju da li je pocetak zaista ispred kraja
 	if( minutePocetakZahtjev >  minuteKrajZahtjev ) poklapanje = true;
 	if( minuteKrajZahtjev <= minutePocetak ) poklapanje = true;
 	if( minuteKraj <= minutePocetakZahtjev ) poklapanje = true;
@@ -254,7 +303,7 @@ else{
 	if( minutePocetakZahtjev <= minutePocetak && minuteKraj <= minuteKrajZahtjev ) poklapanje = true;
 	if( minutePocetak <= minutePocetakZahtjev && minuteKrajZahtjev <= minuteKraj ) poklapanje = true;
 
-	if( periodicnaRezervacija.dan == danUSedmici && periodicnaRezervacija.naziv == zahtjev.naziv && poklapanje ){
+	if( periodicnaRezervacija.dan == danUSedmici && pravilanSemestar && periodicnaRezervacija.naziv == zahtjev.naziv && poklapanje ){
 		var alertText = "Nije moguće rezervisati salu " + zahtjev.naziv + " za navedeni datum " + zahtjev.datum +" i termin od " + zahtjev.pocetak + " do " + zahtjev.kraj +"!";
 		fs.writeFile('zauzeca.json', JSON.stringify(rezervacije), function(err){
 			if(err) throw err;
@@ -282,7 +331,7 @@ res.json(rezervacije);
 
 //---ZADATAK 3---
 app.get("/inicijalneSlike",function(req,res){   
-	fs.readdir("./Slike/", (err, files) => {
+	fs.readdir("./public/", (err, files) => {
 		var povratniInfo = { slike:[] };
 		var brojac = 0;
 		files.forEach(file => {
@@ -296,7 +345,7 @@ app.get("/inicijalneSlike",function(req,res){
 });
 
 app.get("/izmjenaSlika",function(req,res){   
-	fs.readdir("./Slike/", (err, files) => {
+	fs.readdir("./public/", (err, files) => {
 		var sveSlike = { slike:[] };
 		files.forEach(file => {
 			sveSlike.slike.push(file);

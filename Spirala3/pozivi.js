@@ -68,58 +68,104 @@ let Pozivi = (function(){
                     var vraceniInfo = JSON.parse(ajax.responseText);   
                     var prvaSlika = document.getElementById("prvaSlika");
                     var drugaSlika = document.getElementById("drugaSlika");
-                    var trecaSlika = document.getElementById("trecaSlika"); 
-                    prvaSlika.alt = ""; drugaSlika.alt = ""; trecaSlika.alt = "";
-                    prvaSlika.src = "#"; drugaSlika.src = "#"; trecaSlika.src = "#";
+                    var trecaSlika = document.getElementById("trecaSlika");
+                    var prviDiv = document.getElementById("prviDiv");
+                    var drugiDiv = document.getElementById("drugiDiv");
+                    var treciDiv = document.getElementById("treciDiv");
+
+                    prvaSlika.alt = "PrvaSlika"; drugaSlika.alt = "DrugaSlika"; trecaSlika.alt = "TrecaSlika";
+                    prvaSlika.src = ""; drugaSlika.src = ""; trecaSlika.src = "";
+                    prviDiv.style.visibility = 'visible';
+                    drugiDiv.style.visibility = 'visible';
+                    treciDiv.style.visibility = 'visible';
+
+
                     if( vraceniInfo.slike.length < 4 ) document.getElementById("dalje").disabled = true;
-                    if( vraceniInfo.slike.length > 0 ) prvaSlika.src = "/" + vraceniInfo.slike[0];
-                    if( vraceniInfo.slike.length > 1 )  drugaSlika.src = "/" + vraceniInfo.slike[1];   
-                    if( vraceniInfo.slike.length > 2  )  trecaSlika.src = "/" + vraceniInfo.slike[2];                 
+                    
+                    if( vraceniInfo.slike.length > 0 ){ 
+                        prvaSlika.src = "/" + vraceniInfo.slike[0];
+                        prvaSlika.alt = "PrvaSlikaUcitana";
+                    }
+                    if( vraceniInfo.slike.length > 1 ){
+                      drugaSlika.src = "/" + vraceniInfo.slike[1];    
+                      drugaSlika.alt = "DrugaSlikaUcitana"; 
+                  }
+                  if( vraceniInfo.slike.length > 2  ){
+                      trecaSlika.src = "/" + vraceniInfo.slike[2];
+                      trecaSlika.alt = "TrecaSlikaUcitana"
+                  }
+                  if( prvaSlika.alt == "PrvaSlika" )   prviDiv.style.visibility = 'hidden';  
+                  if( drugaSlika.alt == "DrugaSlika" ) {  drugiDiv.style.visibility = 'hidden';  console.log("ok"); }         
+                  if( trecaSlika.alt == "TrecaSlika" )   treciDiv.style.visibility = 'hidden';            
+
+
+              }
+              if (ajax.readyState == 4 && ajax.status == 404)
+                alert("Error");
+        }
+        ajax.open("GET", "inicijalneSlike", true);
+        ajax.send();
+    }
+
+    function izmjenaSlikaImpl(jesteDalje){
+        var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4 && ajax.status == 200){
+                var vraceniInfo = JSON.parse(ajax.responseText);   
+                var prvaSlika = document.getElementById("prvaSlika");
+                var drugaSlika = document.getElementById("drugaSlika");
+                var trecaSlika = document.getElementById("trecaSlika");
+                var prviDiv = document.getElementById("prviDiv");
+                var drugiDiv = document.getElementById("drugiDiv");
+                var treciDiv = document.getElementById("treciDiv");
+
+                prvaSlika.alt = "PrvaSlika"; drugaSlika.alt = "DrugaSlika"; trecaSlika.alt = "TrecaSlika";
+                prvaSlika.src = ""; drugaSlika.src = ""; trecaSlika.src = "";
+                prviDiv.style.visibility = 'visible';
+                drugiDiv.style.visibility = 'visible';
+                treciDiv.style.visibility = 'visible';
+
+                if( vraceniInfo.disableDalje == 'DA' ) document.getElementById("dalje").disabled = true;
+                else document.getElementById("dalje").disabled = false;
+                if( vraceniInfo.disableNazad == 'DA' ) document.getElementById("nazad").disabled = true;
+                else document.getElementById("nazad").disabled = false;
+                
+                if( vraceniInfo.slike.length > 0 ){ 
+                    prvaSlika.src = "/" + vraceniInfo.slike[0];
+                    prvaSlika.alt = "PrvaSlikaUcitana";
                 }
-                if (ajax.readyState == 4 && ajax.status == 404)
-                    alert("Error");
-            }
-            ajax.open("GET", "inicijalneSlike", true);
-            ajax.send();
-        }
+                if( vraceniInfo.slike.length > 1 ){
+                  drugaSlika.src = "/" + vraceniInfo.slike[1];    
+                  drugaSlika.alt = "DrugaSlikaUcitana"; 
+              }
+              if( vraceniInfo.slike.length > 2  ){
+                  trecaSlika.src = "/" + vraceniInfo.slike[2];
+                  trecaSlika.alt = "TrecaSlikaUcitana"
+              }
+              
+              if( prvaSlika.alt == "PrvaSlika" )   prviDiv.style.visibility = 'hidden';  
+              if( drugaSlika.alt == "DrugaSlika" ) {  drugiDiv.style.visibility = 'hidden';  console.log("ok"); }         
+              if( trecaSlika.alt == "TrecaSlika" )   treciDiv.style.visibility = 'hidden';   
+          }
 
-        function izmjenaSlikaImpl(jesteDalje){
-            var ajax = new XMLHttpRequest();
-            ajax.onreadystatechange = function() {
-                if (ajax.readyState == 4 && ajax.status == 200){
-                    var vraceniInfo = JSON.parse(ajax.responseText);   
-                    var prvaSlika = document.getElementById("prvaSlika");
-                    var drugaSlika = document.getElementById("drugaSlika");
-                    var trecaSlika = document.getElementById("trecaSlika"); 
-                    prvaSlika.alt = ""; drugaSlika.alt = ""; trecaSlika.alt = "";
-                    prvaSlika.src = "#"; drugaSlika.src = "#"; trecaSlika.src = "#";
-                    if( vraceniInfo.disableDalje == 'DA' ) document.getElementById("dalje").disabled = true;
-                    else document.getElementById("dalje").disabled = false;
-                    if( vraceniInfo.disableNazad == 'DA' ) document.getElementById("nazad").disabled = true;
-                    else document.getElementById("nazad").disabled = false;
-                    if( vraceniInfo.slike.length > 0 ) prvaSlika.src = "/" + vraceniInfo.slike[0];
-                    if( vraceniInfo.slike.length > 1 )  drugaSlika.src = "/" + vraceniInfo.slike[1];     
-                    if( vraceniInfo.slike.length > 2  )  trecaSlika.src = "/" + vraceniInfo.slike[2];                  
-                }
+          if (ajax.readyState == 4 && ajax.status == 404)
+            alert("Error");
+    }
+    var imgJedan = document.getElementById("prvaSlika").src.split("/");
+    var prviZahtjev = imgJedan[imgJedan.length - 1];
+    var imgDva = document.getElementById("drugaSlika").src.split("/");
+    var drugiZahtjev = imgDva[imgDva.length - 1];
+    var imgTri = document.getElementById("trecaSlika").src.split("/");
+    var treciZahtjev = imgTri[imgTri.length - 1];
+    ajax.open("GET", "izmjenaSlika?prva=" + prviZahtjev + "&treca=" + treciZahtjev + "&jesteDalje=" + jesteDalje, true);
+    ajax.send();
+}
 
-                if (ajax.readyState == 4 && ajax.status == 404)
-                    alert("Error");
-            }
-            var imgJedan = document.getElementById("prvaSlika").src.split("/");
-            var prviZahtjev = imgJedan[imgJedan.length - 1];
-            var imgDva = document.getElementById("drugaSlika").src.split("/");
-            var drugiZahtjev = imgDva[imgDva.length - 1];
-            var imgTri = document.getElementById("trecaSlika").src.split("/");
-            var treciZahtjev = imgTri[imgTri.length - 1];
-            ajax.open("GET", "izmjenaSlika?prva=" + prviZahtjev + "&treca=" + treciZahtjev + "&jesteDalje=" + jesteDalje, true);
-            ajax.send();
-        }
-
-        return {
-            dobaviZauzeca: dobaviZauzecaImpl,
-            rezervisiTermin: rezervisiTerminImpl,
-            inicijalizirajPocetnuSlikama: inicijalizirajPocetnuSlikamaImpl,
-            izmjenaSlika: izmjenaSlikaImpl
-        }
-    }());
+return {
+    dobaviZauzeca: dobaviZauzecaImpl,
+    rezervisiTermin: rezervisiTerminImpl,
+    inicijalizirajPocetnuSlikama: inicijalizirajPocetnuSlikamaImpl,
+    izmjenaSlika: izmjenaSlikaImpl
+}
+}());
 

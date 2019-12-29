@@ -117,9 +117,19 @@ function getval(celija) {
 	var dropDownSale = document.getElementById("listaSala");
 	var odabranaSala = dropDownSale.options[dropDownSale.selectedIndex].value;
 	var checkboxVrijednost = document.getElementById("periodicnaRezervacija").checked;
-	if( pocetakInput == "" || !pocetakInput.match(/[0-9]{1,2}:[0-9]{1,2}/) || krajInput == "" || !krajInput.match(/[0-9]{1,2}:[0-9]{1,2}/) )
-		alert("---GREŠKA---\n\nOdaberite početno i krajnje vrijeme");
-	else{
+	var upaliAlert = false;
+	if( pocetakInput.match(/[0-9]{1,2}:[0-9]{1,2}/) && krajInput.match(/[0-9]{1,2}:[0-9]{1,2}/) ){
+		var pomocniPocetak = pocetakInput.split(":");
+		var pomocniKraj = krajInput.split(":");
+		var pocetakSat = parseInt(pomocniPocetak[0]), krajSat = parseInt(pomocniKraj[0]), pocetakMinute = parseInt(pomocniPocetak[1]), krajMinute = parseInt(pomocniKraj[1]);
+		if( pocetakSat > krajSat ) upaliAlert = true;
+		if( pocetakSat == krajSat && pocetakMinute >= krajMinute ) upaliAlert = true;
+		if( upaliAlert ) alert("---GREŠKA---\n\nPočetak se nalazi iza kraja, besmisleno.");
+	}
+	if(  !upaliAlert ){
+		if( pocetakInput == "" || !pocetakInput.match(/[0-9]{1,2}:[0-9]{1,2}/) || krajInput == "" || !krajInput.match(/[0-9]{1,2}:[0-9]{1,2}/) )
+			alert("---GREŠKA---\n\nOdaberite početno i krajnje vrijeme");
+		else{
 		//Provjeravamo da li je korisnik pritisnuo na crvenu celiju
 		if( celija.classList.contains("zauzeto") ){
 			if( checkboxVrijednost ){
@@ -135,24 +145,51 @@ function getval(celija) {
 		else{
 			datum = celija.innerHTML + "." + trenutniMjesec + "." + trenutnaGodina;
 			if( checkboxVrijednost ){
-				var dani = ["Ponedjeljak","Utorak","Srijeda","Četvrtak","Petak","Subota","Nedjelja"];
-				var danUSedmici = (new Date(trenutnaGodina,trenutniMjesec-1,celija.innerHTML)).getDay();
-				if( danUSedmici == 0 ) danUSedmici += 7;
-				danUSedmici--;
-				var potvrdaRezervacije = confirm("Odabrali ste sljedeći termin:\n\nTip rezervacije: Periodična rezervacija\nSala: " + odabranaSala + "\nPočetak: " + pocetakInput + "\nKraj: " + krajInput + "\nDan: " + dani[danUSedmici] + "\n\nDa li žeite rezervisati?");
-				if( potvrdaRezervacije ){ 
+				var kalendarRef = document.getElementById("kalendar");
+				var potrebniIndex = -1;
+				for (var j = 2, row; row = kalendarRef.rows[j]; j++) {
+					for (var k = 0, col; col = row.cells[k]; k++) {
+						if( col.innerHTML == celija.innerHTML ){
+							potrebniIndex = k;
+						}
+					}  
+				}
+				var paliAlert = false;
+				for (var j = 2, row; row = kalendarRef.rows[j]; j++) {
+					for (var k = 0, col; col = row.cells[k]; k++) {
+						if( k == potrebniIndex && col.classList.contains("zauzeto") ){
+							paliAlert = true;
+						}
+					}  
+				}
+				if( paliAlert ){
+					var dani = ["Ponedjeljak","Utorak","Srijeda","Četvrtak","Petak","Subota","Nedjelja"];
+					var danUSedmici = (new Date(trenutnaGodina,trenutniMjesec-1,celija.innerHTML)).getDay();
+					if( danUSedmici == 0 ) danUSedmici += 7;
+					danUSedmici--;
+					alert( "Nije moguće rezervisati salu " + odabranaSala + " za navedeni dan " + dani[danUSedmici] +" i termin od " + pocetakInput + " do " + krajInput +"!" );
+				}
+				if( !paliAlert ){
+					var dani = ["Ponedjeljak","Utorak","Srijeda","Četvrtak","Petak","Subota","Nedjelja"];
+					var danUSedmici = (new Date(trenutnaGodina,trenutniMjesec-1,celija.innerHTML)).getDay();
+					if( danUSedmici == 0 ) danUSedmici += 7;
+					danUSedmici--;
+					var potvrdaRezervacije = confirm("Odabrali ste sljedeći termin:\n\nTip rezervacije: Periodična rezervacija\nSala: " + odabranaSala + "\nPočetak: " + pocetakInput + "\nKraj: " + krajInput + "\nDan: " + dani[danUSedmici] + "\n\nDa li žeite rezervisati?");
+					if( potvrdaRezervacije ){ 
 				//Ovdje je korisnik odabrao OK, što znači da je potvrdio rezervaciju, te sada počinjemo rad sa serverom.
 				Pozivi.rezervisiTermin(odabranaSala, pocetakInput, krajInput, datum, checkboxVrijednost);
 			}
 		}
-		else{
-			var potvrdaRezervacije = confirm("Odabrali ste sljedeći termin:\n\nTip rezervacije: Vanredna rezervacija\nSala: " + odabranaSala + "\nPočetak: " + pocetakInput + "\nKraj: " + krajInput + "\nDatum: " + datum + "\n\nDa li žeite rezervisati?");
-			if( potvrdaRezervacije ){ 
+	}
+	else{
+		var potvrdaRezervacije = confirm("Odabrali ste sljedeći termin:\n\nTip rezervacije: Vanredna rezervacija\nSala: " + odabranaSala + "\nPočetak: " + pocetakInput + "\nKraj: " + krajInput + "\nDatum: " + datum + "\n\nDa li žeite rezervisati?");
+		if( potvrdaRezervacije ){ 
 				//Ovdje je korisnik odabrao OK, što znači da je potvrdio rezervaciju, te sada počinjemo rad sa serverom.
 				Pozivi.rezervisiTermin(odabranaSala, pocetakInput, krajInput, datum, checkboxVrijednost);
 			}
 
 		}
 	}
+}
 }
 }
