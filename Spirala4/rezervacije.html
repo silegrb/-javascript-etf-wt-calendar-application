@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<title>WT - Projekat</title>
+
+<head>
+  <link rel="stylesheet" href="rezervacije.css">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div class="okvir">
+   <div class="logo">
+    <img src="logolav.jpg" alt="Logo">
+  </div>
+  <div class="meni">
+    <ul>
+      <li><a id="Pocetna" href="pocetna.html">Početna</a></li>
+      <li><a id="Sale" href="sale.html">Sale</a></li>
+      <li><a id="Unos" href="unos.html">Unos</a></li>
+      <li><a id ="Rezervacije" href="rezervacije.html">Rezervacije</a></li>
+      <li><a id ="Osobe" href="osobe.html">Osobe</a></li>
+    </ul>
+  </div>
+  <div class="sadrzaj">	
+
+    <label for="listaOsoba">Osobe</label>
+    <select id="listaOsoba">
+    </select><br><br>
+
+    <label for="listaSala">Sala</label>
+    <select id="listaSala" oninput="unosSala()">
+    </select><br><br>
+
+    <label for="periodicnaRezervacija">Periodična rezervacija</label>
+    <input type="checkbox" name="periodicnaRezervacija" id="periodicnaRezervacija"><br><br>
+    <label for="pocetak">Početak</label>
+    <input type="time" name="pocetak" id="pocetak" oninput="unosPocetak()"><br><br>
+    <label for="kraj">Kraj</label>
+    <input type="time" name="kraj" id="kraj" oninput="unosKraj()"><br><br>
+    <br><br><br>
+    <table id="kalendar">
+      <th colspan="7" id="nazivMjeseca">Novembar</th>
+    </table>
+    <button id="prethodni" onclick="clickPrethodni()">Prethodni</button>
+    <button id="sljedeci" onclick="clickSljedeci()">Sljedeći</button>
+  </div>
+</div>	 
+</body>
+<script src="kalendar.js"></script>
+<script src="pozivi.js"></script>
+<script src="rezervacije.js"></script>
+</html>

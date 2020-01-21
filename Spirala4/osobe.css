@@ -1,0 +1,235 @@
+#Pocetna, #Sale, #Unos, #Rezervacije{
+	text-decoration: none;
+}
+
+.meni{
+	text-align: center;
+	border: solid #90ee90 2px;
+	background-color: #689df2; 
+	width: 500px;
+	height: 100px;
+	margin: auto;
+	margin-top: -40px;	
+}
+
+.meni ul{
+	padding-top: 55px;
+	margin-left: -30px;
+}
+
+.meni li{
+	display:inline;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+.meni li a{
+	color: #000000;
+	font-size: 16.5px;
+	font-family: Arial;
+}
+.logo{
+	margin: auto;
+	width: 100px;
+	height: 80px;
+	margin-top: 35px;
+	z-index: 10;
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.sadrzaj{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border: solid #90ee90 1px;
+	background-color: #689df2; 
+	width: 500px;
+	margin: auto;
+	margin-top: 10px;
+	font-family: Arial;
+}
+
+label {
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 25px;
+	width: 200px;
+}
+
+input[type=time],select {
+	margin-left: 25px;
+	height: 20px;
+	width: 150px;
+	display: inline-block;
+	font-size: 15px;
+}
+
+input[type=checkbox]{
+	-webkit-appearance:none;
+	margin-left: 25px;
+	width:20px;
+	height:20px;
+	background:white;
+	border-radius:2.5px;
+	border:1px solid #555;
+	cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+	-webkit-appearance: none;
+	background-color: #4ee44e;
+	display: inline-block;
+	cursor: pointer;
+}
+
+table{
+	border-color: #00008B;
+	border: 1.5px solid #00008B;
+	width: 90%;
+	margin-left: 25px;
+	border-collapse: separate;
+	border-spacing: 15px 5px;
+	height: 40%;
+	table-layout: fixed;
+	text-align: center;
+}
+
+input[type="time"]::-webkit-clear-button {
+    display: none;
+}
+
+table .slobodno, .zauzeto{
+	font-size: 12px;
+}
+
+table th{
+	text-align: left;
+	font-size: 12px;	
+}
+
+td:empty{
+	border: 1.5px solid #689df2;
+}
+
+table .slobodno{
+	background:linear-gradient(0deg, #689df2 0, #689df2 35%, #00008B 35%, #00008B 41%, #ffffff 41%, #ffffff 100%);
+}
+
+table .zauzeto{
+	background:linear-gradient(0deg, #ff0000 0, #ff0000 35%, #00008B 35%, #00008B 41%, #ffffff 41%, #ffffff 100%);		
+}
+
+table .dani{
+	border: 1.5px solid #00008B;
+	background: #00008B;
+	text-align: center;
+	font-size: 12px;
+	vertical-align: bottom;
+	padding-bottom: 0px;
+	color: #FFFFFF;
+}
+
+td{
+	padding-bottom: 10px;
+	font-size: 12px;
+	border: 1.5px solid #00008B;
+}
+
+#prethodni{
+	padding-top: 3px;
+	background-color: #689df2;
+	margin-top: 10px;
+	margin-left: 25px;
+	float: left;
+	font-size: 12px;
+	border: 1.5px solid #00008B;
+	width: 100px;	
+	height: 25px;
+	text-align: center;
+}
+
+#sljedeci{
+	padding-top: 3px;
+	background-color: #689df2;
+	margin-top: 10px;
+	float: right;
+	font-size: 12px;
+	border: 1.5px solid #00008B;
+	margin-right: 25px;	
+	width: 100px;
+	height: 25px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	table .dani{
+		padding-bottom: 12px;
+	}
+	.meni li{
+		display: block;
+		padding-left: 12.5px;
+	}
+	
+	.meni{
+		text-align: center;
+		height: 200px;
+	}
+
+	.sadrzaj, .meni{
+		width: 80%;
+	}
+
+	.sadrzaj{
+		text-align: center;
+	}
+
+	label, input[type=text], input[type=number], input[type=email], input[type=submit]{
+		margin: auto;
+		display: block;
+	}
+
+	#prethodni, #sljedeci{
+		float: none;
+		display: block;
+		margin: auto;
+		margin-top: 10px;
+	}
+
+	tr:nth-child(n+2) { 
+		display: inline-block;
+	}
+
+	th, td { 
+		display: block; 
+		margin: 2px;
+		padding:1em; 
+	}
+
+	tr:nth-child(n+3):nth-child(-n+4), tr:nth-child(n+6){
+		display: none;
+	}
+
+	td:empty::after{
+		content: "\00a0";
+	}
+
+	table{
+		width: 80%;
+		margin: auto;
+		text-align: center;
+	}
+
+	table .slobodno{
+		background:linear-gradient(0deg, #4ee44e 0, #4ee44e 30%, #00008B 30%, #00008B 36%, #ffffff 36%, #ffffff 100%);
+		
+	}
+	
+	table .zauzeto{
+		background:linear-gradient(0deg, #ff0000 0, #ff0000 30%, #00008B 30%, #00008B 36%, #ffffff 36%, #ffffff 100%);		
+	}
+
+}

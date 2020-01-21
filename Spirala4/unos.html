@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<title>WT - Projekat</title>
+	<head>
+		<link rel="stylesheet" href="unos.css">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+			<div class="logo">
+				<img src="logolav.jpg" alt="Logo">
+			</div>
+			<div class="meni">
+				<ul>
+					<li><a id="Pocetna" href="pocetna.html">Početna</a></li>
+					<li><a id="Sale" href="sale.html">Sale</a></li>
+					<li><a id="Unos" href="unos.html">Unos</a></li>
+					<li><a id ="Rezervacije" href="rezervacije.html">Rezervacije</a></li>
+     				<li><a id ="Osobe" href="osobe.html">Osobe</a></li>
+				</ul>
+			</div>
+			<div class="sadrzaj">	
+				<form>
+  					<label for="naziv">Naziv</label>
+  					<input type="text" name="naziv" id="naziv"><br><br>
+
+  					<label for="brojMjesta">Broj mjesta</label>
+  					<input type="number" name="brojMjesta" id="brojMjesta"><br><br>
+
+  					<label for="odgovornaOsoba">Odgovorna osoba</label>
+  					<input type="email" name="odgovornaOsoba" id="odgovornaOsoba"><br><br>
+
+  					<label for="sprat">Sprat</label>
+  					<input type="text" name="sprat" id="sprat"><br><br><br>
+
+  					<input type="submit" id="unos" value="Potvrdi" onclick="clickPotvrdi()">
+				</form>
+			</div>
+	</body>
+</html>

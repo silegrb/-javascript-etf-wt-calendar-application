@@ -1,0 +1,2 @@
+window.onload = Pozivi.popuniTabeluOsoblja();
+
