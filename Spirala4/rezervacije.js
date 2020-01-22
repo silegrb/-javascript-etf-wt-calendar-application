@@ -19,6 +19,7 @@ function unosPocetak(){
 
 function unosKraj(){
 	provjeriFormu();
+	console.log(pocniBojiti);
 	if( pocniBojiti ){
 		Kalendar.obojiZauzeca( document.getElementById("kalendar"), trenutniMjesec, document.getElementById("listaSala").value, document.getElementById("pocetak").value, document.getElementById("kraj").value );
 	}
