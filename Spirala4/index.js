@@ -400,8 +400,13 @@ app.post("/rezervacije",function(req,res){
 		for (var i = 0; i < REZERVACIJE.vanredna.length; i++) {
 			var vanrednaRezervacija = REZERVACIJE.vanredna[i];
 			var poklapanje = ispitajPoklapanjeVremenskihIntervala(vanrednaRezervacija.pocetak, vanrednaRezervacija.kraj, zahtjev.pocetak, zahtjev.kraj);
-			
-			if( vanrednaRezervacija.datum == zahtjev.datum && poklapanje && vanrednaRezervacija.naziv == zahtjev.naziv  ){
+			var pomocniString = zahtjev.datum.split(".");
+			var datumVanrednaFormatiran = "";
+			if( pomocniString[0].length == 1 ) datumVanrednaFormatiran += "0";
+			datumVanrednaFormatiran += pomocniString[0] + ".";
+			if( pomocniString[1].length == 1 ) datumVanrednaFormatiran += "0";
+			datumVanrednaFormatiran += pomocniString[1] + "." + pomocniString[2];
+			if( vanrednaRezervacija.datum == datumVanrednaFormatiran && poklapanje && vanrednaRezervacija.naziv == zahtjev.naziv  ){
 				var alertText = "Nije moguće rezervisati salu " + zahtjev.naziv + " za navedeni datum " + zahtjev.datum +" i termin od " + zahtjev.pocetak + " do " + zahtjev.kraj + "! Termin je rezervisao " + vanrednaRezervacija.predavac + ".";
 				REZERVACIJE.alertPoruka = alertText;
 				res.json(REZERVACIJE);
@@ -591,43 +596,43 @@ app.get("/tabelaOsoblja",function(req,res){
 						for( var i = 0; i < nizOsoba.osobe.length; i++ )
 							for( var j = 0; j < resultsTermini.length; j++ )
 								for( var k = 0; k < nizOsoba.osobe[i].moguciTermini.length; k++ )
-								if( nizOsoba.osobe[i].moguciTermini[k] == resultsTermini[j].id ){
-									var trenutniDatum = new Date();
-									var trenutnoMinuta = trenutniDatum.getHours()*60 + trenutniDatum.getMinutes();
-									var helpString = resultsTermini[j].pocetak.split(":");
-									var pocetakMinuta = parseInt(helpString[0]) * 60 + parseInt(helpString[1]);
-									helpString = resultsTermini[j].kraj.split(":");
-									var krajMinuta = parseInt(helpString[0]) * 60 + parseInt(helpString[1]);
-									if( trenutnoMinuta >= pocetakMinuta && trenutnoMinuta <= krajMinuta ){
-										var insert = 0;
-										if( resultsTermini[j].datum ){
-											var helpDatum = resultsTermini[j].datum.split(".");
-											if( trenutniDatum.getDate() == parseInt(helpDatum[0]) && trenutniDatum.getMonth() + 1 == parseInt(helpDatum[1]) && trenutniDatum.getYear() + 1900  == parseInt(helpDatum[2]) )
-												insert = 1;
+									if( nizOsoba.osobe[i].moguciTermini[k] == resultsTermini[j].id ){
+										var trenutniDatum = new Date();
+										var trenutnoMinuta = trenutniDatum.getHours()*60 + trenutniDatum.getMinutes();
+										var helpString = resultsTermini[j].pocetak.split(":");
+										var pocetakMinuta = parseInt(helpString[0]) * 60 + parseInt(helpString[1]);
+										helpString = resultsTermini[j].kraj.split(":");
+										var krajMinuta = parseInt(helpString[0]) * 60 + parseInt(helpString[1]);
+										if( trenutnoMinuta >= pocetakMinuta && trenutnoMinuta <= krajMinuta ){
+											var insert = 0;
+											if( resultsTermini[j].datum ){
+												var helpDatum = resultsTermini[j].datum.split(".");
+												if( trenutniDatum.getDate() == parseInt(helpDatum[0]) && trenutniDatum.getMonth() + 1 == parseInt(helpDatum[1]) && trenutniDatum.getYear() + 1900  == parseInt(helpDatum[2]) )
+													insert = 1;
+											}
+											else{
+												var danUSedmici = trenutniDatum.getDay();
+												if( danUSedmici == 0 ) danUSedmici += 7;
+												danUSedmici--;
+
+												if( danUSedmici == resultsTermini[j].dan && resultsTermini[j].semestar == 'zimski' && ((trenutniDatum.getMonth() + 1 >= 10 && trenutniDatum.getMonth() + 1 <= 12) || trenutniDatum.getMonth() + 1 == 1)  )
+													insert = 1;
+												else if( danUSedmici == resultsTermini[j].dan && resultsTermini[j].semetar == 'ljetnji' && (trenutniDatum.getMonth() + 1 >= 2 && trenutniDatum.getMonth() + 1 <= 6) )
+													insert = 1;
+											}
+											if( insert ) nizOsoba.osobe[i].trenutneSale.push( nizOsoba.osobe[i].moguceSale[k] );
 										}
-										else{
-											var danUSedmici = trenutniDatum.getDay();
-											if( danUSedmici == 0 ) danUSedmici += 7;
-											danUSedmici--;
-											
-											if( danUSedmici == resultsTermini[j].dan && resultsTermini[j].semestar == 'zimski' && ((trenutniDatum.getMonth() + 1 >= 10 && trenutniDatum.getMonth() + 1 <= 12) || trenutniDatum.getMonth() + 1 == 1)  )
-												insert = 1;
-											else if( danUSedmici == resultsTermini[j].dan && resultsTermini[j].semetar == 'ljetnji' && (trenutniDatum.getMonth() + 1 >= 2 && trenutniDatum.getMonth() + 1 <= 6) )
-												insert = 1;
-										}
-										if( insert ) nizOsoba.osobe[i].trenutneSale.push( nizOsoba.osobe[i].moguceSale[k] );
 									}
-								}
-								db.Sala.findAll().then(function(resultsSale){
-									for( var i = 0; i < nizOsoba.osobe.length; i++ )
-										for( var j = 0; j < resultsSale.length; j++ )
-											for( var k = 0; k < nizOsoba.osobe[i].trenutneSale.length; k++ )
-											if( nizOsoba.osobe[i].trenutneSale && nizOsoba.osobe[i].trenutneSale[k] == resultsSale[j].id )
-												nizOsoba.osobe[i].trenutneSale[k] = resultsSale[j].naziv;
-											res.send(nizOsoba);
-										});
-								
-							});
+									db.Sala.findAll().then(function(resultsSale){
+										for( var i = 0; i < nizOsoba.osobe.length; i++ )
+											for( var j = 0; j < resultsSale.length; j++ )
+												for( var k = 0; k < nizOsoba.osobe[i].trenutneSale.length; k++ )
+													if( nizOsoba.osobe[i].trenutneSale && nizOsoba.osobe[i].trenutneSale[k] == resultsSale[j].id )
+														nizOsoba.osobe[i].trenutneSale[k] = resultsSale[j].naziv;
+													res.send(nizOsoba);
+												});
+
+								});
 				}); 
 	}); 
 });
